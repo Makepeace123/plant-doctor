@@ -15,7 +15,7 @@ st.set_page_config(
 # Cache resources
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('plant_disease_mobilenetv2.h5')
+    return tf.keras.models.load_model('plant_disease_mobilenetv2_finetuned.h5')
 
 @st.cache_data
 def load_knowledge():
