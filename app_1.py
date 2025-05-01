@@ -11,24 +11,11 @@ st.set_page_config(
     page_icon="🌱",
     layout="centered"
 )
-###########################################
-import os
-os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'  # Fix protobuf compatibility
 
-# Monkey-patch TensorFlow 2.10 compatibility
-import tensorflow as tf
-from tensorflow.keras.layers import DepthwiseConv2D
-
-original_init = DepthwiseConv2D.__init__
-def patched_init(self, **kwargs):
-    kwargs.pop('groups', None)  # Remove problematic argument
-    original_init(self, **kwargs)
-DepthwiseConv2D.__init__ = patched_init
-######################################
 # Cache resources
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('plant_disease_mobilenetv2_finetuned.h5')
+    return tf.keras.models.load_model('universal_model.keras')
 
 @st.cache_data
 def load_knowledge():
