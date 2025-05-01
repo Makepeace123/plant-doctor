@@ -29,7 +29,7 @@ def main():
 
     uploaded_file = st.file_uploader(
         "Choose an image...", 
-        type=["jpg", "png", "jpeg"],
+        type=[".jpg", ".png", ".jpeg"],
         label_visibility="collapsed"
     )
 
