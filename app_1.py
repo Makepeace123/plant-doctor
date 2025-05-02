@@ -12,10 +12,10 @@ st.set_page_config(
     layout="centered"
 )
 
-# Cache resources
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('universal_model.keras')
+    return tf.keras.models.load_model('plant_model.keras')  # Updated path
+
 
 @st.cache_data
 def load_knowledge():
