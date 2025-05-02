@@ -4,33 +4,7 @@ import numpy as np
 import json
 import tensorflow as tf
 import os
-#############
-import os
-from pathlib import Path
 
-# Debug: List all files in deployment directory
-print("\n=== DEBUG: Directory Contents ===")
-print(f"Working dir: {os.getcwd()}")
-print("Files present:", os.listdir('.'))
-
-# Define absolute path
-MODEL_PATH = Path(__file__).parent / "plant_model.keras"
-print(f"\n=== DEBUG: Model Path ===")
-print(f"Expected path: {MODEL_PATH}")
-print(f"Exists? {MODEL_PATH.exists()}\n")
-
-@st.cache_resource
-def load_model():
-    try:
-        # Use the absolute path
-        model = tf.keras.models.load_model(str(MODEL_PATH))
-        print("✅ Model loaded successfully!")
-        return model
-    except Exception as e:
-        print(f"❌ Load error: {str(e)}")
-        st.error(f"Model loading failed: {str(e)}")
-        st.stop()
-############
 # Configure page
 st.set_page_config(
     page_title="Plant Disease Doctor",
@@ -40,7 +14,7 @@ st.set_page_config(
 
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('./plant_model.keras')  # Updated path
+    return tf.keras.models.load_model('./mount/src/plant-doctor/plant_model.keras')  # Updated path
 
 
 @st.cache_data
