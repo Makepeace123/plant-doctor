@@ -14,7 +14,7 @@ st.set_page_config(
 
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('plant_model.keras')  # Updated path
+    return tf.keras.models.load_model('./plant_model.keras')  # Updated path
 
 
 @st.cache_data
