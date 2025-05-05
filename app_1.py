@@ -12,11 +12,38 @@ st.set_page_config(
     layout="centered"
 )
 
+#@st.cache_resource
+#def load_model():
+#    return tf.keras.models.load_model('./mount/src/plant-doctor/plant_disease_mobilenetv2_finetuned.h5')  # Updated path
+############
+import os
+import streamlit as st
+import tensorflow as tf
+
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('./mount/src/plant-doctor/plant_disease_mobilenetv2_finetuned.h5')  # Updated path
+    model_path = 'plant_disease_mobilenetv2_finetuned.h5'  # Model in the same directory as your app
+    
+    # Fallback paths to check if the model isn't in the main directory
+    fallback_paths = [
+        './models/plant_disease_mobilenetv2_finetuned.h5',
+        './plant-doctor/plant_disease_mobilenetv2_finetuned.h5'
+    ]
+    
+    # Try the main path first
+    if os.path.exists(model_path):
+        return tf.keras.models.load_model(model_path)
+    
+    # Try fallback paths
+    for path in fallback_paths:
+        if os.path.exists(path):
+            return tf.keras.models.load_model(path)
+    
+    # If model not found, show a more user-friendly error
+    st.error("Model file not found. Please check the deployment configuration.")
+    raise FileNotFoundError(f"Model file not found at {model_path} or fallback locations")
 
-
+###########
 @st.cache_data
 def load_knowledge():
     with open('plant_disease_knowledge.json') as f:
