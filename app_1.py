@@ -19,11 +19,23 @@ st.set_page_config(
 import os
 import streamlit as st
 import tensorflow as tf
+from tensorflow.keras.layers import DepthwiseConv2D
 
 @st.cache_resource
 def load_model():
-    model_path = 'plant_disease_mobilenetv2_finetuned.h5'  # Model in the same directory as your app
+    # Define a custom DepthwiseConv2D to handle the missing parameter
+    class CustomDepthwiseConv2D(DepthwiseConv2D):
+        def __init__(self, **kwargs):
+            # Remove the 'groups' parameter if present
+            if 'groups' in kwargs:
+                kwargs.pop('groups')
+            super().__init__(**kwargs)
     
+    # Load the model with custom objects
+    return tf.keras.models.load_model(
+        'plant_disease_mobilenetv2_finetuned.h5',
+        custom_objects={'DepthwiseConv2D': CustomDepthwiseConv2D}
+    )   
     # Fallback paths to check if the model isn't in the main directory
     fallback_paths = [
         './models/plant_disease_mobilenetv2_finetuned.h5',
