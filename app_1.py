@@ -12,27 +12,31 @@ st.set_page_config(
     layout="centered"
 )
 ############
+import os
+import tensorflow as tf
+import streamlit as st
+
 @st.cache_resource
 def load_model():
-    model_dir = 'plant_disease_mobilenetv2_model'  # Directory containing the SavedModel
-    fallback_dirs = [
-        './models/plant_disease_mobilenetv2_model',
-        './plant-doctor/plant_disease_mobilenetv2_model'
+    model_path = 'plant_disease_mobilenetv2_finetuned.keras'  # Main model file
+    fallback_paths = [
+        './models/plant_disease_mobilenetv2_finetuned.keras',
+        './plant-doctor/plant_disease_mobilenetv2_finetuned.keras'
     ]
 
-    # Try main directory first
-    if os.path.exists(model_dir):
-        st.info(f"Model loaded from directory: {model_dir}")
-        return tf.keras.layers.TFSMLayer(model_dir, call_endpoint='serving_default')
-    
-    # Try fallback directories
-    for path in fallback_dirs:
+    # Try the main path first
+    if os.path.exists(model_path):
+        st.info(f"Model loaded from: {model_path}")
+        return tf.keras.models.load_model(model_path)
+
+    # Try fallback paths
+    for path in fallback_paths:
         if os.path.exists(path):
-            st.info(f"Model loaded from fallback directory: {path}")
-            return tf.keras.layers.TFSMLayer(path, call_endpoint='serving_default')
-    
-    # If model directory not found
-    error_message = f"SavedModel directory not found at {model_dir} or fallback locations."
+            st.info(f"Model loaded from fallback path: {path}")
+            return tf.keras.models.load_model(path)
+
+    # If model not found
+    error_message = f"Model file not found at {model_path} or fallback locations."
     st.error(error_message)
     raise FileNotFoundError(error_message)
 ###########
