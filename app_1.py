@@ -12,16 +12,44 @@ st.set_page_config(
     layout="centered"
 )
 ############
+#import os
+#import tensorflow as tf
+#import streamlit as st
+
+#@st.cache_resource
+#def load_model():
+#    model_path = 'plant_disease_mobilenetv2_finetuned.keras'  # Main model file
+ #   fallback_paths = [
+#        './models/plant_disease_mobilenetv2_finetuned.keras',
+ #       './plant-doctor/plant_disease_mobilenetv2_finetuned.keras'
+#    ]
+
+    # Try the main path first
+#    if os.path.exists(model_path):
+#        st.info(f"Model loaded from: {model_path}")
+#        return tf.keras.models.load_model(model_path)
+
+#    # Try fallback paths
+#    for path in fallback_paths:
+#        if os.path.exists(path):
+#            st.info(f"Model loaded from fallback path: {path}")
+#            return tf.keras.models.load_model(path)
+#
+#    # If model not found
+#    error_message = f"Model file not found at {model_path} or fallback locations."
+#    st.error(error_message)
+#raise FileNotFoundError(error_message)
+###########
 import os
 import tensorflow as tf
 import streamlit as st
 
 @st.cache_resource
 def load_model():
-    model_path = 'plant_disease_mobilenetv2_finetuned.keras'  # Main model file
+    model_path = 'plant_disease_mobilenetv2_finetuned.h5'  # Main model file
     fallback_paths = [
-        './models/plant_disease_mobilenetv2_finetuned.keras',
-        './plant-doctor/plant_disease_mobilenetv2_finetuned.keras'
+        './models/plant_disease_mobilenetv2_finetuned.h5',
+        './plant-doctor/plant_disease_mobilenetv2_finetuned.h5'
     ]
 
     # Try the main path first
@@ -39,6 +67,8 @@ def load_model():
     error_message = f"Model file not found at {model_path} or fallback locations."
     st.error(error_message)
     raise FileNotFoundError(error_message)
+
+
 ###########
 @st.cache_data
 def load_knowledge():
