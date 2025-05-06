@@ -42,7 +42,7 @@ def load_model():
 ###########
 @st.cache_data
 def load_knowledge():
-    with open('plant_disease_knowledge.json') as f:
+    with open('final_crop_disease_knowledge_base.json') as f:
         return json.load(f)['diseases']  # Access the diseases dictionary
 
 # Main function
