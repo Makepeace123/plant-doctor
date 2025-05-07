@@ -77,7 +77,7 @@ def load_knowledge():
 
 # Main function
 def main():
-    st.title("🌿 Plant Disease Diagnosis and Doctor 🔬🩺")
+    st.title("🍅🌿 Tomato Disease Diagnosis and Doctor 🔬🩺")
     st.markdown("Upload a clear photo of a plant leaf for instant analysis")
 
     uploaded_file = st.file_uploader(
