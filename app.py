@@ -1,0 +1,135 @@
+import streamlit as st
+from PIL import Image
+import numpy as np
+import json
+import tensorflow as tf
+import os
+
+# Configure page
+st.set_page_config(
+    page_title="Plant Disease Doctor",
+    page_icon="🌱",
+    layout="centered"
+)
+
+@st.cache_resource
+def load_tflite_model():
+    model_path = 'model.tflite'
+    fallback_paths = [
+        './models/model.tflite',
+        './plant-doctor/model.tflite'
+    ]
+
+    # Try main and fallback paths
+    for path in [model_path] + fallback_paths:
+        if os.path.exists(path):
+            st.info(f"TFLite model loaded from: {path}")
+            interpreter = tf.lite.Interpreter(model_path=path)
+            interpreter.allocate_tensors()
+            return interpreter
+
+    error_message = "TFLite model file not found in expected paths."
+    st.error(error_message)
+    raise FileNotFoundError(error_message)
+
+@st.cache_data
+def load_knowledge():
+    with open('final_crop_disease_knowledge_base.json') as f:
+        return json.load(f)['diseases']
+
+def main():
+    st.title("🍅🌿 Tomato Disease Diagnosis and Doctor 🔬🩺")
+    st.markdown("Upload a clear photo of a plant leaf for instant analysis")
+
+    uploaded_file = st.file_uploader(
+        "Choose an image...", 
+        type=[".jpg", ".png", ".jpeg"],
+        label_visibility="collapsed"
+    )
+
+    if uploaded_file:
+        process_image(uploaded_file)
+
+def process_image(uploaded_file):
+    try:
+        interpreter = load_tflite_model()
+        knowledge = load_knowledge()
+
+        # Preprocess image
+        img = Image.open(uploaded_file).convert('RGB').resize((224, 224))
+        img_array = np.array(img).astype(np.float32) / 255.0
+        input_tensor = np.expand_dims(img_array, axis=0)
+
+        # Inference
+        input_details = interpreter.get_input_details()
+        output_details = interpreter.get_output_details()
+
+        interpreter.set_tensor(input_details[0]['index'], input_tensor)
+        with st.spinner("🔍 Analyzing..."):
+            interpreter.invoke()
+            output = interpreter.get_tensor(output_details[0]['index'])[0]
+
+        class_idx = int(np.argmax(output))
+        predicted_class = list(knowledge.keys())[class_idx]
+        info = knowledge[predicted_class]
+        confidence = float(output[class_idx])
+
+        st.image(img, width=300)
+        display_results(predicted_class, info, confidence)
+
+    except Exception as e:
+        st.error(f"❌ Error: {str(e)}")
+        st.stop()
+
+def display_results(predicted_class, info, confidence):
+    plant_type = predicted_class.split('___')[0].replace('_', ' ').title()
+
+    if 'healthy' in predicted_class.lower():
+        st.balloons()
+        st.success(f"✅ Healthy {plant_type}")
+        st.markdown(f"""
+        ### Recommendations
+        {info['recommendations']}
+        
+        ### Monitoring Advice
+        {''.join([f'- {item}\n' for item in info['monitoring_advice']])}
+        """)       
+    else:
+        disease_name = predicted_class.split('___')[1].replace('_', ' ').title()
+        st.warning(f"⚠️ Detected: {disease_name} ({confidence*100:.1f}% confidence)")
+        
+        tab1, tab2, tab3 = st.tabs(["Symptoms", "Treatment", "Prevention"])
+        
+        with tab1:
+            st.markdown(f"""
+            **Plant Type:** {plant_type}
+            
+            **Symptoms:**  
+            {info['symptoms']}
+            
+            **Causes:**  
+            {info['causes']}
+            
+            **Effects:**  
+            {info['effects']}
+            """)
+        
+        with tab2:
+            if info['treatments']['chemical']:
+                chem = info['treatments']['chemical']
+                st.markdown(f"""
+                ### Chemical Treatment
+                **{chem['product']}**  
+                - Dosage: {chem['dosage']}  
+                - Instructions: {chem.get('note', 'N/A')}
+                """)
+            else:
+                st.info("No chemical treatment recommended")
+            
+        with tab3:
+            st.markdown("### Cultural Practices")
+            for method in info['treatments']['cultural']:
+                st.markdown(f"- {method}")
+
+if __name__ == "__main__":
+    main()
