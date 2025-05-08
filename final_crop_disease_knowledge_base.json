@@ -1,6 +1,6 @@
 {
   "diseases": {
-    "Tomato___Bacterial_spot": {
+    "Tomato_Bacterial_spot": {
       "symptoms": "Small, water-soaked leaf lesions with yellow halos, turning brown and dry. Fruits develop raised, rough spots.",
       "causes": "Caused by Xanthomonas spp., spread via splashing water and contaminated tools.",
       "effects": "Defoliation, fruit blemishes, and lower marketability.",
@@ -18,7 +18,7 @@
         }
       }
     },
-    "Tomato___Early_blight": {
+    "Tomato_Early_blight": {
       "symptoms": "Dark spots with concentric rings on older leaves, surrounded by yellow zones.",
       "causes": "Alternaria solani fungus, favored by warm, humid conditions.",
       "effects": "Leaf loss, reduced photosynthesis, and smaller fruit yield.",
@@ -36,7 +36,7 @@
         }
       }
     },
-    "Tomato___Late_blight": {
+    "Tomato_Late_blight": {
       "symptoms": "Large, irregular, water-soaked lesions with pale green borders; white mold under leaf.",
       "causes": "Phytophthora infestans oomycete; thrives in cool, wet conditions.",
       "effects": "Leaf and fruit rot, total crop failure if untreated.",
@@ -72,7 +72,7 @@
         }
       }
     },
-    "Tomato___Septoria_leaf_spot": {
+    "Tomato_Septoria_leaf_spot": {
       "symptoms": "Small, circular spots with gray centers and dark brown margins, mainly on lower leaves.",
       "causes": "Fungus Septoria lycopersici, spreads in humid conditions through splashing water or debris.",
       "effects": "Premature defoliation, reduced yield due to decreased photosynthesis.",
@@ -90,7 +90,7 @@
         }
       }
     },
-    "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "Tomato_Spider_mites Two-spotted_spider_mite": {
       "symptoms": "Stippling or tiny yellow spots on leaves; fine webbing under heavy infestations.",
       "causes": "Infestation by two-spotted spider mites (Tetranychus urticae), favored by hot, dry conditions.",
       "effects": "Leaf bronzing, drop, stunted plant growth, reduced yield.",
@@ -107,7 +107,7 @@
         }
       }
     },
-    "Tomato___Target_Spot": {
+    "Tomato_Target_Spot": {
       "symptoms": "Dark brown spots with concentric rings (bullseye pattern) on leaves and fruits.",
       "causes": "Fungus Corynespora cassiicola, spread through water and infected plant debris.",
       "effects": "Leaf drop and fruit lesions, leading to poor fruit quality and lower yield.",
@@ -125,7 +125,7 @@
         }
       }
     },
-    "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "Tomato_Tomato_Yellow_Leaf_Curl_Virus": {
       "symptoms": "Upward curling and yellowing of leaves, stunted growth, flower drop.",
       "causes": "Transmitted by whiteflies carrying Tomato Yellow Leaf Curl Virus (TYLCV).",
       "effects": "Severely stunted plants with little or no fruit; major economic losses.",
@@ -143,7 +143,7 @@
         }
       }
     },
-    "Tomato___Tomato_mosaic_virus": {
+    "Tomato_Tomato_mosaic_virus": {
       "symptoms": "Mottled or mosaic-like light and dark green areas on leaves, sometimes with leaf distortion.",
       "causes": "Caused by Tomato Mosaic Virus (ToMV), spread through contact with infected tools, hands, or plants.",
       "effects": "Reduced plant vigor, deformed fruits, uneven ripening, and lower yields.",
@@ -157,7 +157,7 @@
         "chemical": null
       }
     },
-    "Tomato___healthy": {
+    "Tomato_healthy": {
       "diagnosis": "No disease detected",
       "symptoms": null,
       "causes": null,
