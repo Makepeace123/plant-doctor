@@ -20,7 +20,6 @@ def load_tflite_model():
         './plant-doctor/model.tflite'
     ]
 
-    # Try main and fallback paths
     for path in [model_path] + fallback_paths:
         if os.path.exists(path):
             st.info(f"TFLite model loaded from: {path}")
@@ -36,6 +35,12 @@ def load_tflite_model():
 def load_knowledge():
     with open('final_crop_disease_knowledge_base.json') as f:
         return json.load(f)['diseases']
+
+# NEW: Load class indices from class_indices.json
+@st.cache_data
+def load_class_indices():
+    with open('class_indices.json') as f:
+        return json.load(f)
 
 def main():
     st.title("🍅🌿 Tomato Disease Diagnosis and Doctor 🔬🩺")
@@ -54,6 +59,7 @@ def process_image(uploaded_file):
     try:
         interpreter = load_tflite_model()
         knowledge = load_knowledge()
+        class_indices = load_class_indices()  # NEW
 
         # Preprocess image
         img = Image.open(uploaded_file).convert('RGB').resize((224, 224))
@@ -70,7 +76,7 @@ def process_image(uploaded_file):
             output = interpreter.get_tensor(output_details[0]['index'])[0]
 
         class_idx = int(np.argmax(output))
-        predicted_class = list(knowledge.keys())[class_idx]
+        predicted_class = class_indices[str(class_idx)]  # UPDATED
         info = knowledge[predicted_class]
         confidence = float(output[class_idx])
 
@@ -95,7 +101,7 @@ def display_results(predicted_class, info, confidence):
         {''.join([f'- {item}\n' for item in info['monitoring_advice']])}
         """)       
     else:
-        disease_name = predicted_class.split('___')[1].replace('_', ' ').title()
+        disease_name = predicted_class.split('___')[1].replace('_', ' ').title() if '___' in predicted_class else predicted_class.replace('_', ' ').title()  # UPDATED fallback
         st.warning(f"⚠️ Detected: {disease_name} ({confidence*100:.1f}% confidence)")
         
         tab1, tab2, tab3 = st.tabs(["Symptoms", "Treatment", "Prevention"])
