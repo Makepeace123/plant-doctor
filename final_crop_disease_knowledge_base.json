@@ -56,7 +56,7 @@
     },
     "Tomato___Leaf_Mold": {
       "symptoms": "Yellow spots on upper leaf surfaces and olive-green to gray mold on the undersides.",
-      "causes": "Fungus *Fulvia fulva*, spread in humid, poorly ventilated environments.",
+      "causes": "Fungus Fulvia fulva, spread in humid, poorly ventilated environments.",
       "effects": "Reduces leaf area and photosynthesis; weakens plants.",
       "treatments": {
         "cultural": [
@@ -72,100 +72,100 @@
         }
       }
     },
-      "Tomato___Septoria_leaf_spot": {
-          "symptoms": "Small, circular spots with gray centers and dark brown margins, mainly on lower leaves.",
-          "causes": "Fungus Septoria lycopersici, spreads in humid conditions through splashing water or debris.",
-          "effects": "Premature defoliation, reduced yield due to decreased photosynthesis.",
-          "treatments": {
-            "cultural": [
-              "Remove infected lower leaves",
-              "Avoid overhead irrigation",
-              "Use crop rotation"
-            ],
-            "mechanical": [],
-            "chemical": {
-              "product": "Chlorothalonil or Mancozeb",
-              "note": "Start application at first symptom appearance",
-              "dosage": "1.5–2.0 kg/ha"
-            }
-          }
-        },
-      "Tomato___Spider_mites Two-spotted_spider_mite": {
-          "symptoms": "Stippling or tiny yellow spots on leaves; fine webbing under heavy infestations.",
-          "causes": "Infestation by two-spotted spider mites (*Tetranychus urticae*), favored by hot, dry conditions.",
-          "effects": "Leaf bronzing, drop, stunted plant growth, reduced yield.",
-          "treatments": {
-            "cultural": [
-              "Increase humidity",
-              "Spray plants with water to knock off mites"
-            ],
-            "mechanical": [],
-            "chemical": {
-              "product": "Abamectin or Mitac (Amitraz)",
-              "note": "Use selective miticides to avoid harming beneficial insects",
-              "dosage": "200–300 mL/ha"
-            }
-          }
-        },
-        "Tomato___Target_Spot": {
-          "symptoms": "Dark brown spots with concentric rings (bullseye pattern) on leaves and fruits.",
-          "causes": "Fungus *Corynespora cassiicola*, spread through water and infected plant debris.",
-          "effects": "Leaf drop and fruit lesions, leading to poor fruit quality and lower yield.",
-          "treatments": {
-            "cultural": [
-              "Remove infected debris",
-              "Ensure plant spacing for airflow",
-              "Rotate crops"
-            ],
-            "mechanical": [],
-            "chemical": {
-              "product": "Azoxystrobin or Chlorothalonil",
-              "note": "Begin treatment early when spotting appears",
-              "dosage": "400–600 mL/ha"
-            }
-          }
-        },
-        "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
-          "symptoms": "Upward curling and yellowing of leaves, stunted growth, flower drop.",
-          "causes": "Transmitted by whiteflies carrying *Tomato Yellow Leaf Curl Virus (TYLCV)*.",
-          "effects": "Severely stunted plants with little or no fruit; major economic losses.",
-          "treatments": {
-            "cultural": [
-              "Use TYLCV-resistant varieties",
-              "Control whiteflies with yellow sticky traps",
-              "Remove infected plants immediately"
-            ],
-            "mechanical": [],
-            "chemical": {
-              "product": "Imidacloprid (insecticide for whiteflies)",
-              "note": "Apply systemically early in the season",
-              "dosage": "250–300 mL/ha"
-            }
-          }
-        },
-        "Tomato___Tomato_mosaic_virus": {
-          "symptoms": "Mottled or mosaic-like light and dark green areas on leaves, sometimes with leaf distortion.",
-          "causes": "Caused by Tomato Mosaic Virus (ToMV), spread through contact with infected tools, hands, or plants.",
-          "effects": "Reduced plant vigor, deformed fruits, uneven ripening, and lower yields.",
-          "treatments": {
-            "cultural": [
-              "Disinfect tools regularly",
-              "Remove and destroy infected plants",
-              "Use virus-free seeds"
-            ],
-            "mechanical": [],
-            "chemical": null
-          }
-        },           
+    "Tomato___Septoria_leaf_spot": {
+      "symptoms": "Small, circular spots with gray centers and dark brown margins, mainly on lower leaves.",
+      "causes": "Fungus Septoria lycopersici, spreads in humid conditions through splashing water or debris.",
+      "effects": "Premature defoliation, reduced yield due to decreased photosynthesis.",
+      "treatments": {
+        "cultural": [
+          "Remove infected lower leaves",
+          "Avoid overhead irrigation",
+          "Use crop rotation"
+        ],
+        "mechanical": [],
+        "chemical": {
+          "product": "Chlorothalonil or Mancozeb",
+          "note": "Start application at first symptom appearance",
+          "dosage": "1.5–2.0 kg/ha"
+        }
+      }
+    },
+    "Tomato___Spider_mites Two-spotted_spider_mite": {
+      "symptoms": "Stippling or tiny yellow spots on leaves; fine webbing under heavy infestations.",
+      "causes": "Infestation by two-spotted spider mites (Tetranychus urticae), favored by hot, dry conditions.",
+      "effects": "Leaf bronzing, drop, stunted plant growth, reduced yield.",
+      "treatments": {
+        "cultural": [
+          "Increase humidity",
+          "Spray plants with water to knock off mites"
+        ],
+        "mechanical": [],
+        "chemical": {
+          "product": "Abamectin or Mitac (Amitraz)",
+          "note": "Use selective miticides to avoid harming beneficial insects",
+          "dosage": "200–300 mL/ha"
+        }
+      }
+    },
+    "Tomato___Target_Spot": {
+      "symptoms": "Dark brown spots with concentric rings (bullseye pattern) on leaves and fruits.",
+      "causes": "Fungus Corynespora cassiicola, spread through water and infected plant debris.",
+      "effects": "Leaf drop and fruit lesions, leading to poor fruit quality and lower yield.",
+      "treatments": {
+        "cultural": [
+          "Remove infected debris",
+          "Ensure plant spacing for airflow",
+          "Rotate crops"
+        ],
+        "mechanical": [],
+        "chemical": {
+          "product": "Azoxystrobin or Chlorothalonil",
+          "note": "Begin treatment early when spotting appears",
+          "dosage": "400–600 mL/ha"
+        }
+      }
+    },
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+      "symptoms": "Upward curling and yellowing of leaves, stunted growth, flower drop.",
+      "causes": "Transmitted by whiteflies carrying Tomato Yellow Leaf Curl Virus (TYLCV).",
+      "effects": "Severely stunted plants with little or no fruit; major economic losses.",
+      "treatments": {
+        "cultural": [
+          "Use TYLCV-resistant varieties",
+          "Control whiteflies with yellow sticky traps",
+          "Remove infected plants immediately"
+        ],
+        "mechanical": [],
+        "chemical": {
+          "product": "Imidacloprid (insecticide for whiteflies)",
+          "note": "Apply systemically early in the season",
+          "dosage": "250–300 mL/ha"
+        }
+      }
+    },
+    "Tomato___Tomato_mosaic_virus": {
+      "symptoms": "Mottled or mosaic-like light and dark green areas on leaves, sometimes with leaf distortion.",
+      "causes": "Caused by Tomato Mosaic Virus (ToMV), spread through contact with infected tools, hands, or plants.",
+      "effects": "Reduced plant vigor, deformed fruits, uneven ripening, and lower yields.",
+      "treatments": {
+        "cultural": [
+          "Disinfect tools regularly",
+          "Remove and destroy infected plants",
+          "Use virus-free seeds"
+        ],
+        "mechanical": [],
+        "chemical": null
+      }
+    },
     "Tomato___healthy": {
       "diagnosis": "No disease detected",
       "symptoms": null,
       "causes": null,
       "effects": null,
-      "recommendations": ["Tomato plant is healthy. Maintain sanitation and balanced nutrition."],
+      "recommendations": "Tomato plant is healthy. Maintain clean fields and seed health.",
       "monitoring_advice": [
-        "Inspect for leaf spots or mold weekly",
-        "Prune lower leaves if humidity is high"
+        "Inspect leaves for dark lesions weekly",
+        "Apply fungicide preventively if wet conditions persist"
       ],
       "treatments": {
         "cultural": [],
