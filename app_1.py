@@ -11,45 +11,12 @@ st.set_page_config(
     page_icon="🌱",
     layout="centered"
 )
-############
-#import os
-#import tensorflow as tf
-#import streamlit as st
-
-#@st.cache_resource
-#def load_model():
-#    model_path = 'plant_disease_mobilenetv2_finetuned.keras'  # Main model file
- #   fallback_paths = [
-#        './models/plant_disease_mobilenetv2_finetuned.keras',
- #       './plant-doctor/plant_disease_mobilenetv2_finetuned.keras'
-#    ]
-
-    # Try the main path first
-#    if os.path.exists(model_path):
-#        st.info(f"Model loaded from: {model_path}")
-#        return tf.keras.models.load_model(model_path)
-
-#    # Try fallback paths
-#    for path in fallback_paths:
-#        if os.path.exists(path):
-#            st.info(f"Model loaded from fallback path: {path}")
-#            return tf.keras.models.load_model(path)
-#
-#    # If model not found
-#    error_message = f"Model file not found at {model_path} or fallback locations."
-#    st.error(error_message)
-#raise FileNotFoundError(error_message)
-###########
-import os
-import tensorflow as tf
-import streamlit as st
-
 @st.cache_resource
 def load_model():
-    model_path = 'plant_disease_mobilenetv2_finetuned.h5'  # Main model file
+    model_path = 'tomato_disease_mobilenetv2_finetuned.h5'  # Main model file
     fallback_paths = [
-        './models/plant_disease_mobilenetv2_finetuned.h5',
-        './plant-doctor/plant_disease_mobilenetv2_finetuned.h5'
+        './models/tomato_disease_mobilenetv2_finetuned.h5',
+        './plant-doctor/tomato_disease_mobilenetv2_finetuned.h5'
     ]
 
     # Try the main path first
@@ -116,42 +83,21 @@ def process_image(uploaded_file):
         st.error(f"❌ Error: {str(e)}")
         st.stop()
 
-#def display_results(predicted_class, info, confidence):
+def display_results(predicted_class, info, confidence):
     # Extract plant type (before ___)
-#    plant_type = predicted_class.split('___')[0].replace('_', ' ').title()
+    plant_type = predicted_class.split('___')[0].replace('_', ' ').title()
     
-#    if 'healthy' in predicted_class.lower():
+    if 'healthy' in predicted_class.lower():
         # Healthy plant display
-#        st.balloons()
-#        st.success(f"✅ Healthy {plant_type}")
-#        st.markdown(f"""
+        st.balloons()
+        st.success(f"✅ Healthy {plant_type}")
+        st.markdown(f"""
         ### Recommendations
-#        {info['recommendations']}
+        {info['recommendations']}
         
         ### Monitoring Advice
-#        {''.join([f'- {item}\n' for item in info['monitoring_advice']])}
-#        """)
-    ############
-
-def display_disease_info(label, confidence):
-    disease_info = knowledge_base.get(label, {})
-    if label.lower() == "healthy":
-        # Display tabs for healthy leaf info
-        tab1, tab2, tab3 = st.tabs(["Status", "Recommendations", "Monitoring Advice"])
-
-        with tab1:
-            st.success(f"**This tomato leaf is healthy with {confidence:.1f}% confidence.**")
-
-        with tab2:
-            st.markdown("### Recommendations")
-            for item in disease_info.get("recommendations", []):
-                st.markdown(f"- {item}")
-
-        with tab3:
-            st.markdown("### Monitoring Advice")
-            for item in disease_info.get("monitoring_advice", []):
-                st.markdown(f"- {item}")
-#########        
+        {''.join([f'- {item}\n' for item in info['monitoring_advice']])}
+        """)       
     else:
         # Diseased plant display
         disease_name = predicted_class.split('___')[1].replace('_', ' ').title()
