@@ -301,7 +301,7 @@
       "symptoms": null,
       "causes": null,
       "effects": null,
-      "recommendations": "Tomato plant is healthy. Maintain sanitation and balanced nutrition.",
+      "recommendations": ["Tomato plant is healthy. Maintain sanitation and balanced nutrition."],
       "monitoring_advice": [
         "Inspect for leaf spots or mold weekly",
         "Prune lower leaves if humidity is high"
