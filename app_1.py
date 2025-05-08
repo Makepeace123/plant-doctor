@@ -132,22 +132,25 @@ def process_image(uploaded_file):
 #        {''.join([f'- {item}\n' for item in info['monitoring_advice']])}
 #        """)
     ############
-def display_results(predicted_class, info, confidence):
-    plant_type = predicted_class.split('___')[0].replace('_', ' ').title()
 
-    if 'healthy' in predicted_class.lower():
-        st.balloons()
-        st.success(f"✅ Healthy {plant_type}")
-        st.markdown(f"""
-        ### Status
-        This tomato leaf is healthy with **{confidence*100:.1f}%** confidence.
+def display_disease_info(label, confidence):
+    disease_info = knowledge_base.get(label, {})
+    if label.lower() == "healthy":
+        # Display tabs for healthy leaf info
+        tab1, tab2, tab3 = st.tabs(["Status", "Recommendations", "Monitoring Advice"])
 
-        ### Recommendations
-        {info['recommendations']}
+        with tab1:
+            st.success(f"**This tomato leaf is healthy with {confidence:.1f}% confidence.**")
 
-        ### Monitoring Advice
-        {'\n'.join([f'- {item}' for item in info['monitoring_advice']])}
-        """)
+        with tab2:
+            st.markdown("### Recommendations")
+            for item in disease_info.get("recommendations", []):
+                st.markdown(f"- {item}")
+
+        with tab3:
+            st.markdown("### Monitoring Advice")
+            for item in disease_info.get("monitoring_advice", []):
+                st.markdown(f"- {item}")
 #########        
     else:
         # Diseased plant display
