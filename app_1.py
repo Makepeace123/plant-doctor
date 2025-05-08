@@ -28,7 +28,7 @@ def load_keras_model():
         zip_file.extract(model_filename)
         
         # Load the Keras model
-        model = tf.keras.models.load_model(model_filename)
+        model = tf.keras.models.load_model(tomato_doctor_mobilenetv2.keras)
         st.success("Keras model loaded successfully from zip archive!")
         return model
         
