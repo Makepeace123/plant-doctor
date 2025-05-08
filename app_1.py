@@ -19,7 +19,7 @@ st.set_page_config(
 def load_keras_model():
     try:
         # Download and extract the zip file from GitHub
-        zip_url = "https://github.com/yourusername/repo/releases/download/v1.0/tomato_doctor_mobilenetv2.zip"
+        zip_url = "https://github.com/Makepeace123/repo/releases/download/v1.0/tomato_doctor_mobilenetv2.7z"
         response = requests.get(zip_url)
         zip_file = zipfile.ZipFile(io.BytesIO(response.content))
         
