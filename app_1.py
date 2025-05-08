@@ -13,10 +13,10 @@ st.set_page_config(
 )
 @st.cache_resource
 def load_model():
-    model_path = 'tomato_disease_mobilenetv2_finetuned.h5'  # Main model file
+    model_path = 'tomato_disease_mobilenetv2_finetuned.keras'  # Main model file
     fallback_paths = [
-        './models/tomato_disease_mobilenetv2_finetuned.h5',
-        './plant-doctor/tomato_disease_mobilenetv2_finetuned.h5'
+        './models/tomato_disease_mobilenetv2_finetuned.keras',
+        './plant-doctor/tomato_disease_mobilenetv2_finetuned.keras'
     ]
 
     # Try the main path first
