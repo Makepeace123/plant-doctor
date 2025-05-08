@@ -4,6 +4,9 @@ import numpy as np
 import json
 import tensorflow as tf
 import os
+import requests
+import zipfile
+import io
 
 # Configure page
 st.set_page_config(
@@ -13,34 +16,43 @@ st.set_page_config(
 )
 
 @st.cache_resource
-def load_tflite_model():
-    model_path = 'model.tflite'
-    fallback_paths = [
-        './models/model.tflite',
-        './plant-doctor/model.tflite'
-    ]
-
-    for path in [model_path] + fallback_paths:
-        if os.path.exists(path):
-            st.info(f"TFLite model loaded from: {path}")
-            interpreter = tf.lite.Interpreter(model_path=path)
-            interpreter.allocate_tensors()
-            return interpreter
-
-    error_message = "TFLite model file not found in expected paths."
-    st.error(error_message)
-    raise FileNotFoundError(error_message)
+def load_keras_model():
+    try:
+        # Download and extract the zip file from GitHub
+        zip_url = "https://github.com/yourusername/repo/releases/download/v1.0/tomato_doctor_mobilenetv2.zip"
+        response = requests.get(zip_url)
+        zip_file = zipfile.ZipFile(io.BytesIO(response.content))
+        
+        # Extract the model file (assuming it's named 'model.keras' inside the zip)
+        model_filename = 'model.keras'
+        zip_file.extract(model_filename)
+        
+        # Load the Keras model
+        model = tf.keras.models.load_model(model_filename)
+        st.success("Keras model loaded successfully from zip archive!")
+        return model
+        
+    except Exception as e:
+        st.error(f"❌ Error loading model: {str(e)}")
+        st.stop()
 
 @st.cache_data
 def load_knowledge():
-    with open('final_crop_disease_knowledge_base.json') as f:
-        return json.load(f)['diseases']
+    try:
+        with open('final_crop_disease_knowledge_base.json') as f:
+            return json.load(f)['diseases']
+    except Exception as e:
+        st.error(f"❌ Error loading knowledge base: {str(e)}")
+        st.stop()
 
-# NEW: Load class indices from class_indices.json
 @st.cache_data
 def load_class_indices():
-    with open('class_indices.json') as f:
-        return json.load(f)
+    try:
+        with open('class_indices.json') as f:
+            return json.load(f)
+    except Exception as e:
+        st.error(f"❌ Error loading class indices: {str(e)}")
+        st.stop()
 
 def main():
     st.title("🍅🌿 Tomato Disease Diagnosis and Doctor 🔬🩺")
@@ -57,9 +69,9 @@ def main():
 
 def process_image(uploaded_file):
     try:
-        interpreter = load_tflite_model()
+        model = load_keras_model()
         knowledge = load_knowledge()
-        class_indices = load_class_indices()  # NEW
+        class_indices = load_class_indices()
 
         # Preprocess image
         img = Image.open(uploaded_file).convert('RGB').resize((224, 224))
@@ -67,16 +79,11 @@ def process_image(uploaded_file):
         input_tensor = np.expand_dims(img_array, axis=0)
 
         # Inference
-        input_details = interpreter.get_input_details()
-        output_details = interpreter.get_output_details()
-
-        interpreter.set_tensor(input_details[0]['index'], input_tensor)
         with st.spinner("🔍 Analyzing..."):
-            interpreter.invoke()
-            output = interpreter.get_tensor(output_details[0]['index'])[0]
+            output = model.predict(input_tensor)[0]
 
         class_idx = int(np.argmax(output))
-        predicted_class = class_indices[str(class_idx)]  # UPDATED
+        predicted_class = class_indices[str(class_idx)]
         info = knowledge[predicted_class]
         confidence = float(output[class_idx])
 
@@ -84,7 +91,7 @@ def process_image(uploaded_file):
         display_results(predicted_class, info, confidence)
 
     except Exception as e:
-        st.error(f"❌ Error: {str(e)}")
+        st.error(f"❌ Error processing image: {str(e)}")
         st.stop()
 
 def display_results(predicted_class, info, confidence):
@@ -101,7 +108,7 @@ def display_results(predicted_class, info, confidence):
         {''.join([f'- {item}\n' for item in info['monitoring_advice']])}
         """)       
     else:
-        disease_name = predicted_class.split('___')[1].replace('_', ' ').title() if '___' in predicted_class else predicted_class.replace('_', ' ').title()  # UPDATED fallback
+        disease_name = predicted_class.split('___')[1].replace('_', ' ').title() if '___' in predicted_class else predicted_class.replace('_', ' ').title()
         st.warning(f"⚠️ Detected: {disease_name} ({confidence*100:.1f}% confidence)")
         
         tab1, tab2, tab3 = st.tabs(["Symptoms", "Treatment", "Prevention"])
