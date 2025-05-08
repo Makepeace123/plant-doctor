@@ -116,21 +116,39 @@ def process_image(uploaded_file):
         st.error(f"❌ Error: {str(e)}")
         st.stop()
 
-def display_results(predicted_class, info, confidence):
+#def display_results(predicted_class, info, confidence):
     # Extract plant type (before ___)
-    plant_type = predicted_class.split('___')[0].replace('_', ' ').title()
+#    plant_type = predicted_class.split('___')[0].replace('_', ' ').title()
     
-    if 'healthy' in predicted_class.lower():
+#    if 'healthy' in predicted_class.lower():
         # Healthy plant display
+#        st.balloons()
+#        st.success(f"✅ Healthy {plant_type}")
+#        st.markdown(f"""
+        ### Recommendations
+#        {info['recommendations']}
+        
+        ### Monitoring Advice
+#        {''.join([f'- {item}\n' for item in info['monitoring_advice']])}
+#        """)
+    ############
+def display_results(predicted_class, info, confidence):
+    plant_type = predicted_class.split('___')[0].replace('_', ' ').title()
+
+    if 'healthy' in predicted_class.lower():
         st.balloons()
         st.success(f"✅ Healthy {plant_type}")
         st.markdown(f"""
+        ### Status
+        This tomato leaf is healthy with **{confidence*100:.1f}%** confidence.
+
         ### Recommendations
         {info['recommendations']}
-        
+
         ### Monitoring Advice
-        {''.join([f'- {item}\n' for item in info['monitoring_advice']])}
+        {'\n'.join([f'- {item}' for item in info['monitoring_advice']])}
         """)
+#########        
     else:
         # Diseased plant display
         disease_name = predicted_class.split('___')[1].replace('_', ' ').title()
