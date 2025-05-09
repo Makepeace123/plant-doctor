@@ -15,7 +15,7 @@ st.set_page_config(
 @st.cache_resource
 def load_models():
     # Load leaf classifier model
-    leaf_classifier = tf.keras.models.load_model('leaf_classifier_model.h5')
+    leaf_classifier = tf.keras.models.load_model('leaf_classifier_mobilenetv2.h5')
     
     # Load disease detection model
     model_path = 'model.tflite'
