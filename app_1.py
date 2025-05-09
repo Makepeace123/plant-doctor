@@ -13,7 +13,11 @@ st.set_page_config(
 )
 
 @st.cache_resource
-def load_tflite_model():
+def load_models():
+    # Load leaf classifier model
+    leaf_classifier = tf.keras.models.load_model('leaf_classifier_model.h5')
+    
+    # Load disease detection model
     model_path = 'model.tflite'
     fallback_paths = [
         './models/model.tflite',
@@ -25,7 +29,7 @@ def load_tflite_model():
             st.info(f"TFLite model loaded from: {path}")
             interpreter = tf.lite.Interpreter(model_path=path)
             interpreter.allocate_tensors()
-            return interpreter
+            return leaf_classifier, interpreter
 
     error_message = "TFLite model file not found in expected paths."
     st.error(error_message)
@@ -36,11 +40,15 @@ def load_knowledge():
     with open('final_crop_disease_knowledge_base.json') as f:
         return json.load(f)['diseases']
 
-# NEW: Load class indices from class_indices.json
 @st.cache_data
 def load_class_indices():
     with open('class_indices.json') as f:
         return json.load(f)
+
+def preprocess_image(image):
+    img = image.resize((224, 224))
+    img_array = np.array(img).astype(np.float32) / 255.0
+    return np.expand_dims(img_array, axis=0)
 
 def main():
     st.title("🍅🌿 Tomato Disease Diagnosis and Doctor 🔬🩺")
@@ -57,26 +65,51 @@ def main():
 
 def process_image(uploaded_file):
     try:
-        interpreter = load_tflite_model()
+        leaf_classifier, interpreter = load_models()
         knowledge = load_knowledge()
-        class_indices = load_class_indices()  # NEW
+        class_indices = load_class_indices()
 
-        # Preprocess image
-        img = Image.open(uploaded_file).convert('RGB').resize((224, 224))
-        img_array = np.array(img).astype(np.float32) / 255.0
-        input_tensor = np.expand_dims(img_array, axis=0)
+        # Load and preprocess image
+        img = Image.open(uploaded_file).convert('RGB')
+        img_array = preprocess_image(img)
 
-        # Inference
+        # First stage: Leaf classification
+        leaf_pred = leaf_classifier.predict(img_array)
+        leaf_class = np.argmax(leaf_pred)
+        leaf_confidence = leaf_pred[0][leaf_class]
+        
+        # Leaf class mapping (update these based on your leaf classifier's class indices)
+        LEAF_CLASSES = {
+            0: 'non_leaf',
+            1: 'other_leaf',
+            2: 'tomato_leaf'
+        }
+        
+        current_leaf_class = LEAF_CLASSES[leaf_class]
+        
+        if current_leaf_class != 'tomato_leaf':
+            if current_leaf_class == 'non_leaf':
+                st.error("❌ This doesn't appear to be a leaf image. Please upload a clear photo of a tomato leaf.")
+            else:
+                st.error("❌ This appears to be a non-tomato leaf. Please upload a tomato leaf for disease diagnosis.")
+            st.image(img, width=300)
+            st.write(f"Classification: {current_leaf_class.replace('_', ' ').title()} ({leaf_confidence*100:.1f}% confidence)")
+            return
+
+        # Only proceed with disease detection if it's a tomato leaf
+        st.success("✓ Verified: Tomato leaf detected")
+        
+        # Second stage: Disease detection
         input_details = interpreter.get_input_details()
         output_details = interpreter.get_output_details()
 
-        interpreter.set_tensor(input_details[0]['index'], input_tensor)
-        with st.spinner("🔍 Analyzing..."):
+        interpreter.set_tensor(input_details[0]['index'], img_array)
+        with st.spinner("🔍 Analyzing for diseases..."):
             interpreter.invoke()
             output = interpreter.get_tensor(output_details[0]['index'])[0]
 
         class_idx = int(np.argmax(output))
-        predicted_class = class_indices[str(class_idx)]  # UPDATED
+        predicted_class = class_indices[str(class_idx)]
         info = knowledge[predicted_class]
         confidence = float(output[class_idx])
 
@@ -101,7 +134,7 @@ def display_results(predicted_class, info, confidence):
         {''.join([f'- {item}\n' for item in info['monitoring_advice']])}
         """)       
     else:
-        disease_name = predicted_class.split('___')[1].replace('_', ' ').title() if '___' in predicted_class else predicted_class.replace('_', ' ').title()  # UPDATED fallback
+        disease_name = predicted_class.split('___')[1].replace('_', ' ').title() if '___' in predicted_class else predicted_class.replace('_', ' ').title()
         st.warning(f"⚠️ Detected: {disease_name} ({confidence*100:.1f}% confidence)")
         
         tab1, tab2, tab3 = st.tabs(["Symptoms", "Treatment", "Prevention"])
