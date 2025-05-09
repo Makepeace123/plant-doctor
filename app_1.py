@@ -52,7 +52,7 @@ def preprocess_image(image):
 
 def main():
     st.title("🍅🌿 Tomato Disease Diagnosis and Doctor 🔬🩺")
-    st.markdown("Upload a clear photo of a plant leaf for instant analysis")
+    st.markdown("Upload a clear photo of a TOMATO leaf for instant analysis")
 
     uploaded_file = st.file_uploader(
         "Choose an image...", 
