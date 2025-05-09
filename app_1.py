@@ -18,20 +18,19 @@ def load_models():
     leaf_classifier = tf.keras.models.load_model('leaf_classifier_mobilenetv2.h5')
     
     # Load disease detection model
-    model_path = 'model.tflite'
+    model_path = 'Tomato_doctor_mblnetv2.h5'
     fallback_paths = [
-        './models/model.tflite',
-        './plant-doctor/model.tflite'
+        './models/Tomato_doctor_mblnetv2.h5',
+        './plant-doctor/Tomato_doctor_mblnetv2.h5'
     ]
 
     for path in [model_path] + fallback_paths:
         if os.path.exists(path):
-            st.info(f"TFLite model loaded from: {path}")
-            interpreter = tf.lite.Interpreter(model_path=path)
-            interpreter.allocate_tensors()
-            return leaf_classifier, interpreter
+            st.info(f"Model loaded from: {path}")
+            disease_model = tf.keras.models.load_model(path)
+            return leaf_classifier, disease_model
 
-    error_message = "TFLite model file not found in expected paths."
+    error_message = "Model file not found in expected paths."
     st.error(error_message)
     raise FileNotFoundError(error_message)
 
@@ -56,7 +55,7 @@ def main():
 
     uploaded_file = st.file_uploader(
         "Choose an image...", 
-        type=[".jpg", ".png", ".jpeg"],
+        type=["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"],  # Case-insensitive
         label_visibility="collapsed"
     )
 
@@ -65,7 +64,12 @@ def main():
 
 def process_image(uploaded_file):
     try:
-        leaf_classifier, interpreter = load_models()
+        # Validate file extension
+        if not uploaded_file.name.lower().endswith(('.jpg', '.jpeg', '.png')):
+            st.error("Invalid file type. Please upload a .jpg, .jpeg, or .png file.")
+            return
+
+        leaf_classifier, disease_model = load_models()
         knowledge = load_knowledge()
         class_indices = load_class_indices()
 
@@ -74,11 +78,11 @@ def process_image(uploaded_file):
         img_array = preprocess_image(img)
 
         # First stage: Leaf classification
-        leaf_pred = leaf_classifier.predict(img_array)
+        leaf_pred = leaf_classifier.predict(img_array, verbose=0)
         leaf_class = np.argmax(leaf_pred)
         leaf_confidence = leaf_pred[0][leaf_class]
         
-        # Leaf class mapping (update these based on your leaf classifier's class indices)
+        # Leaf class mapping
         LEAF_CLASSES = {
             0: 'non_leaf',
             1: 'other_leaf',
@@ -100,13 +104,8 @@ def process_image(uploaded_file):
         st.success("✓ Verified: Tomato leaf detected")
         
         # Second stage: Disease detection
-        input_details = interpreter.get_input_details()
-        output_details = interpreter.get_output_details()
-
-        interpreter.set_tensor(input_details[0]['index'], img_array)
         with st.spinner("🔍 Analyzing for diseases..."):
-            interpreter.invoke()
-            output = interpreter.get_tensor(output_details[0]['index'])[0]
+            output = disease_model.predict(img_array, verbose=0)[0]
 
         class_idx = int(np.argmax(output))
         predicted_class = class_indices[str(class_idx)]
@@ -171,4 +170,7 @@ def display_results(predicted_class, info, confidence):
                 st.markdown(f"- {method}")
 
 if __name__ == "__main__":
+    # Suppress TensorFlow warnings
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+    tf.get_logger().setLevel('ERROR')
     main()
