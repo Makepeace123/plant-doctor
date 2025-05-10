@@ -134,18 +134,17 @@ def display_results(predicted_class, info, confidence):
        # """)
 ######################################
     if 'healthy' in predicted_class.lower():
-    st.balloons()
-    st.success("✅ Healthy Tomato Leaf")
-    st.markdown("""
-    ### Recommendations
-    Tomato plant is healthy. Maintain clean fields and seed health.
-    
-    ### Monitoring Advice
-    - Inspect leaves for dark lesions weekly
-    - Apply fungicide preventively if wet conditions persist
-    - Monitor for early blight symptoms
-    - Ensure proper spacing between plants (18-24 inches)
-    """)
+        st.balloons()
+        st.success("✅ Healthy Tomato Leaf")
+        st.markdown("""
+        ### Recommendations
+        Tomato plant is healthy. Maintain clean fields and seed health.
+        ### Monitoring Advice
+        - Inspect leaves for dark lesions weekly
+        - Apply fungicide preventively if wet conditions persist
+        - Monitor for early blight symptoms
+        - Ensure proper spacing between plants (18-24 inches)
+        """)
 ############################################
     
     else:
