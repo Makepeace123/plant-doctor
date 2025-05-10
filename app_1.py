@@ -160,7 +160,7 @@ def display_results(predicted_class, info, confidence):
                 chem = info['treatments']['chemical']
                 
                 # Price disclaimer
-                st.info(" E *Price estimates are approximate and may vary by store/region*")
+                st.info(" CAUTION: *Price estimates are approximate and may vary by store/region*")
                 
                 st.markdown(f"""
                 - **Product:** {chem['product']}
