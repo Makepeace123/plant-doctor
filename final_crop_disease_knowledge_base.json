@@ -12,9 +12,10 @@
         ],
         "mechanical": [],
         "chemical": {
-          "product": "Copper-mancozeb mix",
+          "product": "EFEKTO VIRIKOP (Copper oxychloride) or HAMBA COPPER OXYCHLORIDE",
+          "price": "R160 (200g) / R190 (1kg)",
           "note": "Apply every 7–10 days during humid conditions",
-          "dosage": "2–3 L/ha"
+          "dosage": "50g per 20L water"
         }
       }
     },
@@ -30,9 +31,10 @@
         ],
         "mechanical": [],
         "chemical": {
-          "product": "Chlorothalonil",
+          "product": "HAMBA MANCOZEB or COSAMIL (Mancozeb-based)",
+          "price": "R160 (1kg) / R65 (500g)",
           "note": "Apply as soon as symptoms appear",
-          "dosage": "1.5–2.5 kg/ha"
+          "dosage": "40g per 20L water"
         }
       }
     },
@@ -48,13 +50,14 @@
         ],
         "mechanical": [],
         "chemical": {
-          "product": "Metalaxyl + Mancozeb",
+          "product": "EFEKTO VIRIKOP (Copper) + HAMBA MANCOZEB (Mix)",
+          "price": "R160 (200g copper) + R160 (1kg mancozeb)",
           "note": "Start preventive sprays before rainy season",
-          "dosage": "350–500 mL/ha"
+          "dosage": "50g copper + 40g mancozeb per 20L water"
         }
       }
     },
-    "Tomato___Leaf_Mold": {
+    "Tomato_Leaf_Mold": {
       "symptoms": "Yellow spots on upper leaf surfaces and olive-green to gray mold on the undersides.",
       "causes": "Fungus Fulvia fulva, spread in humid, poorly ventilated environments.",
       "effects": "Reduces leaf area and photosynthesis; weakens plants.",
@@ -66,9 +69,10 @@
         ],
         "mechanical": [],
         "chemical": {
-          "product": "Chlorothalonil or Mancozeb",
-          "note": "Apply at first sign of disease",
-          "dosage": "1.5–2.0 kg/ha"
+          "product": "KUMULUS WG (Sulfur)",
+          "price": "R113.04 (200g)",
+          "note": "Avoid high temperatures (>30°C)",
+          "dosage": "30g per 20L water"
         }
       }
     },
@@ -84,9 +88,10 @@
         ],
         "mechanical": [],
         "chemical": {
-          "product": "Chlorothalonil or Mancozeb",
+          "product": "HAMBA MANCOZEB",
+          "price": "R160 (1kg)",
           "note": "Start application at first symptom appearance",
-          "dosage": "1.5–2.0 kg/ha"
+          "dosage": "40g per 20L water"
         }
       }
     },
@@ -101,9 +106,10 @@
         ],
         "mechanical": [],
         "chemical": {
-          "product": "Abamectin or Mitac (Amitraz)",
-          "note": "Use selective miticides to avoid harming beneficial insects",
-          "dosage": "200–300 mL/ha"
+          "product": "KUMULUS WG (Sulfur) or KICKBACK (if miticide)",
+          "price": "R113.04 (200g sulfur) / R340 (340g Kickback)",
+          "note": "Sulfur for mild cases; Kickback for severe infestations",
+          "dosage": "30g sulfur or 10ml Kickback per 20L water"
         }
       }
     },
@@ -119,9 +125,10 @@
         ],
         "mechanical": [],
         "chemical": {
-          "product": "Azoxystrobin or Chlorothalonil",
+          "product": "HAMBA MANCOZEB",
+          "price": "R160 (1kg)",
           "note": "Begin treatment early when spotting appears",
-          "dosage": "400–600 mL/ha"
+          "dosage": "40g per 20L water"
         }
       }
     },
@@ -137,9 +144,10 @@
         ],
         "mechanical": [],
         "chemical": {
-          "product": "Imidacloprid (insecticide for whiteflies)",
+          "product": "KICKBACK (likely Imidacloprid)",
+          "price": "R340 (340g)",
           "note": "Apply systemically early in the season",
-          "dosage": "250–300 mL/ha"
+          "dosage": "10ml per 20L water"
         }
       }
     },
