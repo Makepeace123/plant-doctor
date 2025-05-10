@@ -7,7 +7,7 @@ import os
 
 # Configure page
 st.set_page_config(
-    page_title="Plant Disease Doctor",
+    page_title="Tomato Disease Doctor",
     page_icon="🌱",
     layout="centered"
 )
