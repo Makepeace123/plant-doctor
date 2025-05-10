@@ -55,7 +55,7 @@ def main():
 
     uploaded_file = st.file_uploader(
         "Choose an image...", 
-        type=["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"],  # Case-insensitive
+        type=["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"],
         label_visibility="collapsed"
     )
 
@@ -136,7 +136,7 @@ def display_results(predicted_class, info, confidence):
         disease_name = predicted_class.split('___')[1].replace('_', ' ').title() if '___' in predicted_class else predicted_class.replace('_', ' ').title()
         st.warning(f"⚠️ Detected: {disease_name} ({confidence*100:.1f}% confidence)")
         
-        tab1, tab2, tab3 = st.tabs(["Symptoms", "Treatment", "Prevention"])
+        tab1, tab2, tab3, tab4 = st.tabs(["Symptoms", "Treatment", "Prevention", "Chemical Details"])
         
         with tab1:
             st.markdown(f"""
@@ -153,21 +153,43 @@ def display_results(predicted_class, info, confidence):
             """)
         
         with tab2:
+            st.markdown("### Treatment Options")
+            
             if info['treatments']['chemical']:
+                st.markdown("#### Chemical Treatment")
                 chem = info['treatments']['chemical']
                 st.markdown(f"""
-                ### Chemical Treatment
-                **{chem['product']}**  
-                - Dosage: {chem['dosage']}  
-                - Instructions: {chem.get('note', 'N/A')}
+                - **Product:** {chem['product']}
+                - **Dosage:** {chem['dosage']}
+                - **Instructions:** {chem.get('note', 'N/A')}
                 """)
             else:
                 st.info("No chemical treatment recommended")
+                
+            if info['treatments']['mechanical']:
+                st.markdown("#### Mechanical Treatment")
+                for method in info['treatments']['mechanical']:
+                    st.markdown(f"- {method}")
             
         with tab3:
-            st.markdown("### Cultural Practices")
+            st.markdown("### Prevention Methods")
+            st.markdown("#### Cultural Practices")
             for method in info['treatments']['cultural']:
                 st.markdown(f"- {method}")
+                
+        with tab4:
+            if info['treatments']['chemical']:
+                chem = info['treatments']['chemical']
+                st.markdown(f"""
+                ### Detailed Chemical Information
+                **Product Name:** {chem['product']}  
+                **Price:** {chem.get('price', 'Price not available')}  
+                **Active Ingredient:** {chem.get('active_ingredient', 'N/A')}  
+                **Application Frequency:** {chem.get('frequency', 'As needed')}  
+                **Safety Precautions:** {chem.get('safety', 'Wear protective gear during application')}
+                """)
+            else:
+                st.info("No chemical treatment details available")
 
 if __name__ == "__main__":
     # Suppress TensorFlow warnings
