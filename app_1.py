@@ -151,16 +151,20 @@ def display_results(predicted_class, info, confidence):
             **Effects:**  
             {info['effects']}
             """)
-        
-        with tab2:
+            
+      with tab2:
+            st.markdown("### Prevention Methods")
+            st.markdown("#### Cultural Practices")
+            for method in info['treatments']['cultural']:
+                st.markdown(f"- {method}")  
+                
+                
+        with tab3:
             st.markdown("### Treatment Options")
             
             if info['treatments']['chemical']:
                 st.markdown("#### Chemical Treatment")
                 chem = info['treatments']['chemical']
-                
-                # Price disclaimer
-                st.info(" CAUTION: *Price estimates are approximate and may vary by store/region*")
                 
                 st.markdown(f"""
                 - **Product:** {chem['product']}
@@ -175,14 +179,11 @@ def display_results(predicted_class, info, confidence):
                 st.markdown("#### Mechanical Treatment")
                 for method in info['treatments']['mechanical']:
                     st.markdown(f"- {method}")
-            
-        with tab3:
-            st.markdown("### Prevention Methods")
-            st.markdown("#### Cultural Practices")
-            for method in info['treatments']['cultural']:
-                st.markdown(f"- {method}")
                 
         with tab4:
+         # Price disclaimer
+         st.info(" CAUTION: *Price estimates are approximate and may vary by store/region*")
+                
             if info['treatments']['chemical']:
                 chem = info['treatments']['chemical']
 
