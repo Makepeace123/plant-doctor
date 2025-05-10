@@ -158,8 +158,13 @@ def display_results(predicted_class, info, confidence):
             if info['treatments']['chemical']:
                 st.markdown("#### Chemical Treatment")
                 chem = info['treatments']['chemical']
+                
+                # Price disclaimer
+                st.info("💲 *Price estimates are approximate and may vary by store/region*")
+                
                 st.markdown(f"""
                 - **Product:** {chem['product']}
+                - **Approx. Price:** {chem.get('price', 'N/A')}  
                 - **Dosage:** {chem['dosage']}
                 - **Instructions:** {chem.get('note', 'N/A')}
                 """)
@@ -180,10 +185,24 @@ def display_results(predicted_class, info, confidence):
         with tab4:
             if info['treatments']['chemical']:
                 chem = info['treatments']['chemical']
+                
+                # Expanded disclaimer
+                st.warning("""
+                **Important Notes About Prices:**
+                - All prices are approximate estimates only
+                - Based on single-store reference data (2024)
+                - Actual prices may vary by:
+                  - Geographic location
+                  - Supplier/vendor
+                  - Market fluctuations
+                  - Package size variations
+                - Always verify current prices before purchasing
+                """)
+                
                 st.markdown(f"""
                 ### Detailed Chemical Information
                 **Product Name:** {chem['product']}  
-                **Price:** {chem.get('price', 'Price not available')}  
+                **Approx. Market Price:** {chem.get('price', 'Not available')}  
                 **Active Ingredient:** {chem.get('active_ingredient', 'N/A')}  
                 **Application Frequency:** {chem.get('frequency', 'As needed')}  
                 **Safety Precautions:** {chem.get('safety', 'Wear protective gear during application')}
