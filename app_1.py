@@ -191,19 +191,19 @@ def display_results(predicted_class, info, confidence):
                 ### Detailed Chemical Information
                 
                 **Product Name:**
-                -*{chem['product']}*  
+                *{chem['product']}*  
                 
                 **Approx. Market Price:**
-                -*{chem.get('price', 'Not available')}* 
+                *{chem.get('price', 'Not available')}* 
                 
                 **Active Ingredient:**
-                -*{chem.get('active_ingredient', 'N/A')}*  
+                *{chem.get('active_ingredient', 'N/A')}*  
                 
                 **Application Frequency:**
-                -*{chem.get('frequency', 'As needed')}*  
+                *{chem.get('frequency', 'As needed')}*  
                 
                 **Safety Precautions:**
-                -*{chem.get('safety', 'Wear protective gear during application')}*
+                *{chem.get('safety', 'Wear protective gear during application')}*
                 """)
             else:
                 st.info("No chemical treatment details available")
