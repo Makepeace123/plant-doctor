@@ -182,7 +182,7 @@ def display_results(predicted_class, info, confidence):
                 
         with tab4:
             # Price disclaimer
-            st.info("*CAUTION: Price estimates are approximate and may vary by store/region*")
+            st.info("*⚠️CAUTION: Price estimates are approximate and may vary by store/region*")
                 
             if info['treatments']['chemical']:
                 chem = info['treatments']['chemical']
@@ -193,13 +193,13 @@ def display_results(predicted_class, info, confidence):
                 **Product Name:**  
                 *{chem['product']}*  
                 
-                **Approx. Market Price:**  
+                **💵Approx. Market Price:**  
                 *{chem.get('price', 'Not available')}* 
                 
                 **Application Frequency:**  
                 *{chem.get('frequency', 'As per the chemical instructions')}*  
                 
-                **Safety Precautions:**  
+                **⚠️Safety Precautions:**  
                 *{chem.get('safety', 'Wear protective gear during application')}*
                 """)
             else:
