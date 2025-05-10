@@ -122,16 +122,32 @@ def process_image(uploaded_file):
 def display_results(predicted_class, info, confidence):
     plant_type = predicted_class.split('___')[0].replace('_', ' ').title()
 
-    if 'healthy' in predicted_class.lower():
-        st.balloons()
-        st.success(f"✅ Healthy {plant_type}")
-        st.markdown(f"""
+    #if 'healthy' in predicted_class.lower():
+     #   st.balloons()
+      #  st.success(f"✅ Healthy {plant_type}")
+       # st.markdown(f"""
         ### Recommendations
-        {info['recommendations']}
+       # {info['recommendations']}
         
         ### Monitoring Advice
-        {''.join([f'- {item}\n' for item in info['monitoring_advice']])}
-        """)       
+        #{''.join([f'- {item}\n' for item in info['monitoring_advice']])}
+       # """)
+######################################
+    if 'healthy' in predicted_class.lower():
+    st.balloons()
+    st.success("✅ Healthy Tomato Leaf")
+    st.markdown("""
+    ### Recommendations
+    Tomato plant is healthy. Maintain clean fields and seed health.
+    
+    ### Monitoring Advice
+    - Inspect leaves for dark lesions weekly
+    - Apply fungicide preventively if wet conditions persist
+    - Monitor for early blight symptoms
+    - Ensure proper spacing between plants (18-24 inches)
+    """)
+############################################
+    
     else:
         disease_name = predicted_class.split('___')[1].replace('_', ' ').title() if '___' in predicted_class else predicted_class.replace('_', ' ').title()
         st.warning(f"⚠️ Detected: {disease_name} ({confidence*100:.1f}% confidence)")
