@@ -181,7 +181,7 @@ def display_results(predicted_class, info, confidence):
                 
         with tab4:
             # Price disclaimer
-            st.info("CAUTION: *Price estimates are approximate and may vary by store/region*")
+            st.info("*CAUTION: Price estimates are approximate and may vary by store/region*")
                 
             if info['treatments']['chemical']:
                 chem = info['treatments']['chemical']
