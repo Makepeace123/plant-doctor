@@ -160,7 +160,7 @@ def display_results(predicted_class, info, confidence):
                 chem = info['treatments']['chemical']
                 
                 # Price disclaimer
-                st.info("💲 *Price estimates are approximate and may vary by store/region*")
+                st.info(" E *Price estimates are approximate and may vary by store/region*")
                 
                 st.markdown(f"""
                 - **Product:** {chem['product']}
@@ -185,20 +185,7 @@ def display_results(predicted_class, info, confidence):
         with tab4:
             if info['treatments']['chemical']:
                 chem = info['treatments']['chemical']
-                
-                # Expanded disclaimer
-                st.warning("""
-                **Important Notes About Prices:**
-                - All prices are approximate estimates only
-                - Based on single-store reference data (2024)
-                - Actual prices may vary by:
-                  - Geographic location
-                  - Supplier/vendor
-                  - Market fluctuations
-                  - Package size variations
-                - Always verify current prices before purchasing
-                """)
-                
+
                 st.markdown(f"""
                 ### Detailed Chemical Information
                 **Product Name:** {chem['product']}  
