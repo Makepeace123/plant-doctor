@@ -13,7 +13,7 @@
         "mechanical": [],
         "chemical": {
           "product": "EFEKTO VIRIKOP (Copper oxychloride) or HAMBA COPPER OXYCHLORIDE",
-          "price": "R160 (200g) / R190 (1kg)",
+          "price": "E160 (200g) / E190 (1kg)",
           "note": "Apply every 7–10 days during humid conditions",
           "dosage": "50g per 20L water"
         }
@@ -32,7 +32,7 @@
         "mechanical": [],
         "chemical": {
           "product": "HAMBA MANCOZEB or COSAMIL (Mancozeb-based)",
-          "price": "R160 (1kg) / R65 (500g)",
+          "price": "E160 (1kg) / E65 (500g)",
           "note": "Apply as soon as symptoms appear",
           "dosage": "40g per 20L water"
         }
@@ -51,7 +51,7 @@
         "mechanical": [],
         "chemical": {
           "product": "EFEKTO VIRIKOP (Copper) + HAMBA MANCOZEB (Mix)",
-          "price": "R160 (200g copper) + R160 (1kg mancozeb)",
+          "price": "E160 (200g copper) + E160 (1kg mancozeb)",
           "note": "Start preventive sprays before rainy season",
           "dosage": "50g copper + 40g mancozeb per 20L water"
         }
@@ -70,7 +70,7 @@
         "mechanical": [],
         "chemical": {
           "product": "KUMULUS WG (Sulfur)",
-          "price": "R113.04 (200g)",
+          "price": "E113.04 (200g)",
           "note": "Avoid high temperatures (>30°C)",
           "dosage": "30g per 20L water"
         }
@@ -89,7 +89,7 @@
         "mechanical": [],
         "chemical": {
           "product": "HAMBA MANCOZEB",
-          "price": "R160 (1kg)",
+          "price": "E160 (1kg)",
           "note": "Start application at first symptom appearance",
           "dosage": "40g per 20L water"
         }
@@ -107,7 +107,7 @@
         "mechanical": [],
         "chemical": {
           "product": "KUMULUS WG (Sulfur) or KICKBACK (if miticide)",
-          "price": "R113.04 (200g sulfur) / R340 (340g Kickback)",
+          "price": "E113.04 (200g sulfur) / E340 (340g Kickback)",
           "note": "Sulfur for mild cases; Kickback for severe infestations",
           "dosage": "30g sulfur or 10ml Kickback per 20L water"
         }
@@ -126,7 +126,7 @@
         "mechanical": [],
         "chemical": {
           "product": "HAMBA MANCOZEB",
-          "price": "R160 (1kg)",
+          "price": "E160 (1kg)",
           "note": "Begin treatment early when spotting appears",
           "dosage": "40g per 20L water"
         }
@@ -145,7 +145,7 @@
         "mechanical": [],
         "chemical": {
           "product": "KICKBACK (likely Imidacloprid)",
-          "price": "R340 (340g)",
+          "price": "E340 (340g)",
           "note": "Apply systemically early in the season",
           "dosage": "10ml per 20L water"
         }
