@@ -197,7 +197,7 @@ def display_results(predicted_class, info, confidence):
                 *{chem.get('price', 'Not available')}* 
                 
                 **Application Frequency:**
-                *{chem.get('frequency', 'As needed')}*  
+                *{chem.get('frequency', 'As per  *{chem['product']}* instructions')}*  
                 
                 **Safety Precautions:**
                 *{chem.get('safety', 'Wear protective gear during application')}*
