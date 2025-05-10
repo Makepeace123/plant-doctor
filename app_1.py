@@ -166,8 +166,7 @@ def display_results(predicted_class, info, confidence):
                 chem = info['treatments']['chemical']
                 
                 st.markdown(f"""
-                - **Product:** {chem['product']}
-                - **Approx. Price:** {chem.get('price', 'N/A')}  
+                - **Product:** {chem['product']} 
                 - **Dosage:** {chem['dosage']}
                 - **Instructions:** {chem.get('note', 'N/A')}
                 """)
