@@ -190,19 +190,19 @@ def display_results(predicted_class, info, confidence):
                 st.markdown(f"""
                 ### Detailed Chemical Information
                 
-                **Product Name:**   
+                **Product Name:**
                 -*{chem['product']}*  
                 
-                **Approx. Market Price:**   
+                **Approx. Market Price:**
                 -*{chem.get('price', 'Not available')}* 
                 
-                **Active Ingredient:**   
+                **Active Ingredient:**
                 -*{chem.get('active_ingredient', 'N/A')}*  
                 
-                **Application Frequency:**   
+                **Application Frequency:**
                 -*{chem.get('frequency', 'As needed')}*  
                 
-                **Safety Precautions:**   
+                **Safety Precautions:**
                 -*{chem.get('safety', 'Wear protective gear during application')}*
                 """)
             else:
