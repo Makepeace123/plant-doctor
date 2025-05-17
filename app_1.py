@@ -196,6 +196,9 @@ def display_results(predicted_class, info, confidence):
                 **💰Approx. Market Price:**  
                 *{chem.get('price', 'Not available')}* 
                 
+                **⚖️Application Frequency:**  
+                *{chem.get('frequency', 'As per the chemical instructions')}*  
+                
                 **⚠️Safety Precautions:**  
                 *{chem.get('safety', 'Wear protective gear during application')}*
                 """)
