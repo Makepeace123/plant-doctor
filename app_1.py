@@ -156,7 +156,6 @@ def display_results(predicted_class, info, confidence):
     plant_type = predicted_class.split('___')[0].replace('_', ' ').title()
 
     if 'healthy' in predicted_class.lower():
-        st.balloons()
         st.success("✅ Healthy Tomato Leaf")
         st.markdown("""
         ### Recommendations
