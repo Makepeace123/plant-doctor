@@ -60,7 +60,6 @@ def load_models():
 
     for path in [model_path] + fallback_paths:
         if os.path.exists(path):
-            st.info(f"Model loaded from: {path}")
             disease_model = tf.keras.models.load_model(path)
             return leaf_classifier, disease_model
 
