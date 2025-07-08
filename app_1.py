@@ -4,6 +4,9 @@ import numpy as np
 import json
 import tensorflow as tf
 import os
+import threading
+import time
+import requests
 
 # Configure page
 st.set_page_config(
@@ -11,6 +14,37 @@ st.set_page_config(
     page_icon="🌱",
     layout="centered"
 )
+
+# =============================================
+# HYBRID KEEP-ALIVE SYSTEM (ADDED)
+# =============================================
+def keep_alive():
+    """Background thread to prevent app sleeping"""
+    while True:
+        try:
+            app_url = os.getenv('STREAMLIT_SERVER_BASE_URL', 'http://localhost:8501')
+            requests.get(f"{app_url}/?keepalive=1", timeout=5)
+            time.sleep(240)  # Ping every 4 minutes
+        except:
+            time.sleep(60)
+
+if 'keep_alive_started' not in st.session_state:
+    st.session_state.keep_alive_started = True
+    t = threading.Thread(target=keep_alive, daemon=True)
+    t.start()
+
+# Client-side auto-refresh
+st.markdown("""
+<script>
+setTimeout(function(){ location.reload(); }, 5*60*1000);
+</script>
+""", unsafe_allow_html=True)
+
+# Handle keep-alive ping
+if hasattr(st, 'query_params') and st.query_params.get('keepalive'):
+    st.write("")  # Empty response
+    st.stop()
+# =============================================
 
 @st.cache_resource
 def load_models():
@@ -181,7 +215,6 @@ def display_results(predicted_class, info, confidence):
                     st.markdown(f"- {method}")
                 
         with tab4:
-            # Price disclaimer
             st.info("*⚠️CAUTION: Price estimates are approximate and may vary by store/region*")
                 
             if info['treatments']['chemical']:
