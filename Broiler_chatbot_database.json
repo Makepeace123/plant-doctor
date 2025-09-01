@@ -1,0 +1,934 @@
+[
+  {
+    "intent": "housing_systems",
+    "questions": [
+      "What are the suitable housing systems for broiler production?",
+      "What housing can I use for broilers?",
+      "Which house types work for meat chickens?",
+      "Tell me about broiler housing systems.",
+      "What are the different houses for broilers?",
+      "How should I house my broiler chickens?"
+    ],
+    "answer": "The main systems are full litter, full slats, a combination of slats and litter, and cages. However, for broiler production, only the full litter system is suitable. Slats can cause leg problems in young chicks, and cages are designed for layers only. (Source: Document 1.1.1)"
+  },
+  {
+    "intent": "housing_litter_reason",
+    "questions": [
+      "Why is only the full litter system recommended for broilers?",
+      "Is full litter the best for broilers?",
+      "Why can't I use other systems for my broilers?",
+      "Explain why full litter is recommended.",
+      "What's wrong with slats for broilers?",
+      "Broilers must be on litter, why?"
+    ],
+    "answer": "Slats would cause leg problems to young chicks, and cages are for layers only. The full litter system provides a soft, absorbent surface that supports leg health and is appropriate for the broilers' rapid growth. (Source: Document 1.1.1)"
+  },
+  {
+    "intent": "housing_slats_cages_disadvantages",
+    "questions": [
+      "What are the disadvantages of using slats or cages for broilers?",
+      "Why are cages bad for broilers?",
+      "Problems with slatted floors for broilers.",
+      "What happens if I use cages for meat birds?",
+      "Disadvantages of cages and slats.",
+      "Should I avoid slats for broilers?"
+    ],
+    "answer": "Slats can cause leg problems and injuries to young, fast-growing broilers. Cages are not designed for broilers; they restrict natural behavior like dust bathing and can lead to breast blisters and poor welfare. (Source: Document 1.1.1 + Standard Practice)"
+  },
+  {
+    "intent": "housing_purpose",
+    "questions": [
+      "What is the purpose of a broiler house?",
+      "Why do I need a house for my broilers?",
+      "What does a broiler house do?",
+      "What is the main job of the chicken house?",
+      "How does the house protect the birds?",
+      "Importance of a broiler house."
+    ],
+    "answer": "A properly built house is the first step to successful broiler farming. It should provide protection against adverse weather (cold, heat, rain, wind), diseases, birds of prey, and predators (rats, dogs, cats, snakes). It must also provide an ideal environment for maximum performance. (Source: Document 1.3)"
+  },
+  {
+    "intent": "housing_protection",
+    "questions": [
+      "What should a good broiler house protect against?",
+      "What threats should the house stop?",
+      "What must the house keep out?",
+      "How does the house keep chickens safe?",
+      "List dangers a broiler house protects from.",
+      "Weather and predators protection."
+    ],
+    "answer": "It should protect against: adverse weather (cold, excess heat, rain, wind), diseases, birds of prey, and predators (rats, dogs, cats, snakes, etc.). (Source: Document 1.3)"
+  },
+  {
+    "intent": "site_selection_factors",
+    "questions": [
+      "What are the key factors in selecting a site for a broiler house?",
+      "How do I choose a location for the house?",
+      "Where should I build my broiler house?",
+      "What to consider when siting a poultry house.",
+      "Key site selection factors.",
+      "Best place to put the chicken house on my farm."
+    ],
+    "answer": "Key factors include: The land should not compete with other agricultural activities (e.g., good soil for crops). It should be placed away from other livestock (pigs, cattle, goats) to avoid cross-contamination. Swampy soils must be avoided. Consider prevailing winds; the open sides should face North/South. Houses should be at least 15m apart or step staggered. Good access and visibility for marketing and security. (Source: Document 1.4)"
+  },
+  {
+    "intent": "house_distance",
+    "questions": [
+      "How far apart should broiler houses be placed?",
+      "What is the distance between houses?",
+      "Minimum space between poultry houses.",
+      "How much separation is needed for broiler sheds?",
+      "Why should houses be spaced apart?",
+      "Required gap between two chicken houses."
+    ],
+    "answer": "Houses should be at least 15 meters apart or step staggered in positioning to prevent the spread of disease and allow for proper ventilation. (Source: Document 1.4 & 6.1)"
+  },
+  {
+    "intent": "foundation_specifications",
+    "questions": [
+      "What are the specifications for a proper foundation?",
+      "How to build a strong foundation?",
+      "What are the rules for the foundation?",
+      "How deep and wide should the base be?",
+      "Foundation requirements for a broiler house.",
+      "Making a solid foundation for the house."
+    ],
+    "answer": "The foundation should be three times the width of the wall and as thick as the wall itself. It can be made of rock or bricks. Poles supporting the roof should also have a foundation, preferably of rock. It must be strong enough to withstand a 50-year storm. (Source: Document 1.5)"
+  },
+  {
+    "intent": "floor_concrete_reason",
+    "questions": [
+      "Why should the floor be concrete?",
+      "Is a concrete floor necessary?",
+      "Benefits of a concrete floor.",
+      "Can I use a dirt floor for broilers?",
+      "Why is concrete best for the floor?",
+      "Reasons to use concrete flooring."
+    ],
+    "answer": "Concrete floors are recommended because they are easy to clean and disinfect, provide rodent protection, and are durable. (Source: Document 1.6)"
+  },
+  {
+    "intent": "floor_specifications",
+    "questions": [
+      "What is the recommended height and slope for the broiler house floor?",
+      "How should the floor be sloped?",
+      "What's the best slope for drainage?",
+      "How high should the floor be?",
+      "Floor level and incline specifications.",
+      "Setting the floor height and angle."
+    ],
+    "answer": "The floor level should be at 20cm above outside ground level with a slight slope (about 5%) towards the waste exit. This makes it easy to push water out when cleaning and prevents flooding. A water outlet hole should be provided at the base of the exit wall. The floor should be rough enough to keep bedding in place. (Source: Document 1.6)"
+  },
+  {
+    "intent": "wall_types",
+    "questions": [
+      "What are the two main types of walls in a broiler house?",
+      "What wall designs are used?",
+      "Tell me about the wall construction.",
+      "Different wall types for poultry house.",
+      "How are the walls built?",
+      "Structure of broiler house walls."
+    ],
+    "answer": "The two types are the solid wall-to-roof wall and the dwarf-and-wire mesh wall. (Source: Document 1.7)"
+  },
+  {
+    "intent": "wall_north_south",
+    "questions": [
+      "How should the North/South walls be constructed?",
+      "Building the North and South walls.",
+      "Construction of the long walls.",
+      "What goes on the North South side?",
+      "Dwarf wall and mesh specification.",
+      "How to make the open sides?"
+    ],
+    "answer": "The North/South walls should have a solid dwarf wall up to 4 layers of blocks. From the dwarf wall to the roof, use chick mesh (25mm). The outside should have a curtain to stop rain, wind, and cold. (Source: Document 1.7)"
+  },
+  {
+    "intent": "wall_east_west",
+    "questions": [
+      "How should the East/West walls be constructed?",
+      "Building the East and West walls.",
+      "Construction of the end walls.",
+      "What goes on the East West side?",
+      "How to make the solid walls?",
+      "Specifications for the gable walls."
+    ],
+    "answer": "The East/West wall is solid from floor to roof, except for door spaces and windows. This protects birds from the morning and evening sun. (Source: Document 1.7)"
+  },
+  {
+    "intent": "roof_thatch_pros_cons",
+    "questions": [
+      "What are the advantages and disadvantages of a thatched roof?",
+      "Is a thatch roof good?",
+      "Pros and cons of thatch.",
+      "Should I use grass for my roof?",
+      "Problems with a thatched roof.",
+      "Benefits of thatch for chicken house."
+    ],
+    "answer": "Advantages: Provides good insulation, is less noisy, and is cheap to obtain. Disadvantages: Not very durable, prone to fire damage, and provides a perfect home for rodents. (Source: Document 1.8)"
+  },
+  {
+    "intent": "roof_iron_pros_cons",
+    "questions": [
+      "What are the advantages and disadvantages of an iron sheet roof?",
+      "Is an iron sheet roof good?",
+      "Pros and cons of iron sheets.",
+      "Should I use zinc for my roof?",
+      "Problems with an iron roof.",
+      "Benefits of iron sheets for chicken house."
+    ],
+    "answer": "Advantages: Durable, almost fireproof, and easy to clean and disinfect. Disadvantages: More expensive to buy and can lead to condensation and heat without proper insulation. (Source: Document 1.8)"
+  },
+  {
+    "intent": "roof_flat_overhang",
+    "questions": [
+      "What are the recommended overhangs for a flat roof?",
+      "Flat roof overhang sizes.",
+      "How much should a flat roof stick out?",
+      "Eaves for a flat roof broiler house.",
+      "Overhang specifications for flat design.",
+      "North South overhang for flat roof."
+    ],
+    "answer": "For a flat roof: South side: 50-60cm, North side: 40cm, East/West sides: 30cm. (Source: Document 1.8.1)"
+  },
+  {
+    "intent": "roof_gable_overhang",
+    "questions": [
+      "What are the recommended overhangs for a gable roof?",
+      "Gable roof overhang sizes.",
+      "How much should a gable roof stick out?",
+      "Eaves for a gable roof broiler house.",
+      "Overhang specifications for gable design.",
+      "Standard overhangs for pitched roof."
+    ],
+    "answer": "For a gable roof: North/South sides: 50cm, East/West sides: 30cm. (Source: Document 1.8.1)"
+  },
+  {
+    "intent": "storage_purpose",
+    "questions": [
+      "What is the purpose of the storage room?",
+      "Why do I need a storage room?",
+      "What is the store used for?",
+      "Do I need a separate storage space?",
+      "Function of the storage room.",
+      "What goes in the storage room?"
+    ],
+    "answer": "It is for the storage of feed, extra equipment, and tools. It can also serve as an office. (Source: Document 1.9)"
+  },
+  {
+    "intent": "feed_storage_method",
+    "questions": [
+      "How should feed be stored in the storage room?",
+      "Best way to store feed bags.",
+      "Preventing feed spoilage in storage.",
+      "Rules for storing feed.",
+      "How to keep feed in the store?",
+      "Feed storage guidelines."
+    ],
+    "answer": "The area must be enough to store feed for at least 2 weeks. Feed bags should be stacked on pallets to allow for air circulation and prevent spoilage. The room should have a window for light and aeration and a footbath at the main entrance. (Source: Document 1.9)"
+  },
+  {
+    "intent": "equipment_determinants",
+    "questions": [
+      "What determines the type of poultry equipment to use?",
+      "How do I choose the right equipment?",
+      "What affects the choice of feeders and drinkers?",
+      "Picking equipment for my chickens.",
+      "Factors in selecting poultry gear.",
+      "What dictates which equipment I need?"
+    ],
+    "answer": "The type and design are determined by the morphology and behavior of the chicken. The number of equipment is determined by the population density and average size of the chicken at full growth. (Source: Document 2.1)"
+  }
+]
+,
+  {
+    "intent": "overcrowding_effects",
+    "questions": [
+      "What happens if I overcrowd my broilers?",
+      "Effects of too many birds in a space.",
+      "Problems caused by overcrowding.",
+      "Risks of high stocking density.",
+      "What if my chickens are too crowded?",
+      "Consequences of not having enough space."
+    ],
+    "answer": "Overpopulation leads to uneven growth, high disease infestation, and cannibalism. (Source: Document 2.2)"
+  },
+  {
+    "intent": "feeder_drinker_distance",
+    "questions": [
+      "What is the minimum distance between feeders and drinkers?",
+      "How far apart should feeders be?",
+      "Spacing needed between drinkers.",
+      "Minimum gap for feeding equipment.",
+      "How to space my feeders and drinkers?",
+      "Required distance between feed and water points."
+    ],
+    "answer": "The minimum distance between feeders or drinkers is 40cm. (Source: Document 2.2)"
+  },
+  {
+    "intent": "equipment_wall_distance",
+    "questions": [
+      "How far should drinkers and feeders be from the wall?",
+      "Should equipment be away from the wall?",
+      "Distance to keep from walls for feeders.",
+      "How close to the wall can drinkers be?",
+      "Why keep feeders from the wall?",
+      "Setting up feeders not near the wall."
+    ],
+    "answer": "Drinkers and feeders should be placed at least a meter away from the wall to prevent overcrowding and ensure all birds have access. (Source: Document 2.2)"
+  },
+  {
+    "intent": "chick_tray_quantity",
+    "questions": [
+      "How many chick feed trays do I need for 100 chicks?",
+      "Number of feed trays for 100 chicks.",
+      "For 100 baby chicks, how many trays?",
+      "Calculating feeder trays for 100 birds.",
+      "How many starter trays per hundred chicks?",
+      "Quantity of small feed trays needed."
+    ],
+    "answer": "You need 3 chick feed trays per 100 chicks. (Source: Document 2.3.1)"
+  },
+  {
+    "intent": "chick_tray_age",
+    "questions": [
+      "Until what age are chick feed trays used?",
+      "When to stop using starter trays?",
+      "How long to use baby chick feeders?",
+      "Duration for using tray feeders.",
+      "When to switch from trays to tube feeders?",
+      "Age limit for chick feed trays."
+    ],
+    "answer": "They are used from 1 to 7 days old. (Source: Document 2.3.1)"
+  },
+  {
+    "intent": "tube_feeder_quantity",
+    "questions": [
+      "How many tube feeders do I need for 100 birds?",
+      "Number of tube feeders for 100 birds.",
+      "Calculating tube feeders for a hundred chickens.",
+      "Quantity of tube feeders needed.",
+      "Tube feeder ratio per bird.",
+      "How many tube feeders should I get?"
+    ],
+    "answer": "You need 3 tube feeders per 100 birds. (Source: Document 2.3.2)"
+  },
+  {
+    "intent": "pan_feeder_quantity",
+    "questions": [
+      "How many pan feeders do I need for 100 birds?",
+      "Number of pan feeders for 100 birds.",
+      "Calculating pan feeders for a hundred chickens.",
+      "Quantity of pan feeders needed.",
+      "Pan feeder ratio per bird.",
+      "How many pan feeders should I get?"
+    ],
+    "answer": "You need 3 pan feeders per 100 birds. (Source: Document 2.3.3)"
+  },
+  {
+    "intent": "water_fount_small_quantity",
+    "questions": [
+      "How many water founts do I need for 100 day-old chicks?",
+      "Number of small drinkers for 100 chicks.",
+      "Calculating small water founts for babies.",
+      "Quantity of starter drinkers needed.",
+      "How many small waterers for 100 chickens?",
+      "Water fount ratio for day-old chicks."
+    ],
+    "answer": "You need 3 water founts (3-5 Litres) per 100 birds from 1 to 7 days old. (Source: Document 2.4.1)"
+  },
+  {
+    "intent": "water_fount_large_quantity",
+    "questions": [
+      "How many larger water founts do I need for birds after 7 days?",
+      "Number of big drinkers for growing birds.",
+      "Calculating large water founts.",
+      "Quantity of bigger waterers needed after week one.",
+      "How many large founts for 100 birds?",
+      "Water fount ratio for growers."
+    ],
+    "answer": "You need 1 larger water fount (8.5-12 Litres) per 100 birds from 7 days to the end of the life cycle. (Source: Document 2.4.1)"
+  },
+  {
+    "intent": "bell_drinker_quantity",
+    "questions": [
+      "How many bell drinkers are needed per 100 birds?",
+      "Number of automatic bell drinkers for 100 birds.",
+      "Calculating bell drinkers for a hundred chickens.",
+      "Quantity of bell drinkers needed.",
+      "Bell drinker ratio per bird.",
+      "How many bell drinkers should I use?"
+    ],
+    "answer": "You need 1 automatic bell drinker per 100 birds from 7 days old onwards. (Source: Document 2.4.2)"
+  },
+  {
+    "intent": "nipple_drinker_ratio",
+    "questions": [
+      "What is the ratio of broilers to nipple drinkers?",
+      "How many birds per nipple drinker?",
+      "Nipple drinker stock density.",
+      "Number of chickens per nipple.",
+      "Calculating nipples needed for my flock.",
+      "What is the nipple to bird ratio?"
+    ],
+    "answer": "The ratio is 12 broilers per nipple. (Source: Document 2.4.2)"
+  },
+  {
+    "intent": "nipple_spacing",
+    "questions": [
+      "What is the spacing between nipples on a tube?",
+      "Distance between nipple drinkers.",
+      "How far apart should nipples be?",
+      "Space between each nipple on a line.",
+      "Nipple placement guidelines.",
+      "Optimal gap for chicken nipples."
+    ],
+    "answer": "The distance between nipples on a tube should be 20cm. (Source: Document 2.4.2)"
+  },
+  {
+    "intent": "cup_drinker_ratio",
+    "questions": [
+      "What is the ratio of broilers to cup drinkers?",
+      "How many birds per cup drinker?",
+      "Cup drinker stock density.",
+      "Number of chickens per cup.",
+      "Calculating cups needed for my flock.",
+      "What is the cup to bird ratio?"
+    ],
+    "answer": "The ratio is 30 broilers per cup. (Source: Document 2.4.2)"
+  },
+  {
+    "intent": "cup_spacing",
+    "questions": [
+      "What is the spacing between cups on a tube?",
+      "Distance between cup drinkers.",
+      "How far apart should cups be?",
+      "Space between each cup on a line.",
+      "Cup placement guidelines.",
+      "Optimal gap for chicken cups."
+    ],
+    "answer": "The distance between cups on a tube should be 30cm. (Source: Document 2.4.2)"
+  },
+  {
+    "intent": "heating_equipment",
+    "questions": [
+      "What equipment is used for heating?",
+      "How to heat the brooder house?",
+      "What do I use to keep chicks warm?",
+      "Brooding heating equipment.",
+      "Types of chicken brooders.",
+      "Tools for providing heat to chicks."
+    ],
+    "answer": "Electric brooders (e.g., gas brooders) are used for heating, especially during brooding. (Source: Document 2.5)"
+  },
+  {
+    "intent": "cooling_equipment",
+    "questions": [
+      "What equipment is used for cooling?",
+      "How to cool down the chicken house?",
+      "What do I use to reduce heat?",
+      "Broiler cooling equipment.",
+      "Types of fans and coolers for poultry.",
+      "Tools for lowering temperature in heat."
+    ],
+    "answer": "Coolers, fans, fogging, or misting systems are used for cooling in hot weather. (Source: Document 2.5 & 1.2.2)"
+  },
+  {
+    "intent": "calculate_500_chick_drinkers",
+    "questions": [
+      "I have 500 chicks, how many small drinkers do I need for the first week?",
+      "Calculating water founts for 500 baby chicks.",
+      "How many small drinkers for 500 birds?",
+      "Number of starters drinkers for 500.",
+      "Waterer quantity for a flock of 500.",
+      "Feeder calculator for 500 chicks."
+    ],
+    "answer": "For 500 chicks, you need (500 / 100) * 3 = 15 water founts (3-5 Litres each). (Source: Document 2.4.1)"
+  },
+  {
+    "intent": "feeder_transition_age",
+    "questions": [
+      "My chicks are 10 days old, should I change their feeders?",
+      "When to switch from trays to other feeders?",
+      "Right age to change feeder types.",
+      "How long to use starter feeding equipment?",
+      "Is 10 days too late for new feeders?",
+      "Feeder change timing."
+    ],
+    "answer": "Yes. You should transition from chick feed trays to tube feeders or pan feeders at 7 days old. (Source: Document 2.3.1 & 2.3.2)"
+  },
+  {
+    "intent": "uneven_growth_feeder_issue",
+    "questions": [
+      "My birds are not growing evenly, is it because I don't have enough feeders?",
+      "Can lack of feeders cause uneven size?",
+      "Feeder problems leading to uneven growth.",
+      "Is overcrowding at feeders a issue?",
+      "Why are my chickens different sizes?",
+      "Relationship between feeder space and growth."
+    ],
+    "answer": "Yes, that is a very likely cause. Overcrowding at feeders means dominant birds eat more, leading to uneven growth. Ensure you have 3 feeders per 100 birds and that they are spaced 40cm apart and 1m from the walls. (Source: Document 2.2 & 2.3.2)"
+  },
+  {
+    "intent": "best_drinker_adults",
+    "questions": [
+      "What is the best drinker to use for big broilers?",
+      "Recommended drinker for grown birds.",
+      "Ideal water system for market-size broilers.",
+      "What to use for adults: bells, nipples, or cups?",
+      "Choosing a drinker for finishing phase.",
+      "Optimal drinker type for large chickens."
+    ],
+    "answer": "For large broilers, automatic bell drinkers, nipple drinkers, or cup drinkers are most efficient. Nipple and cup systems help keep water cleaner. (Source: Document 2.4.2)"
+  }
+]
+,
+  {
+    "intent": "calculate_nipple_drinkers",
+    "questions": [
+      "I'm using nipple drinkers, how many do I need for 1000 birds?",
+      "Calculating nipple drinkers for a large flock.",
+      "How many nipples for 1000 broilers?",
+      "Nipple quantity for 1000 chickens.",
+      "Figuring out nipple drinker needs for 1000.",
+      "What is the total nipple count for 1000 birds?"
+    ],
+    "answer": "With a ratio of 12 birds per nipple, you need 1000 / 12 = 84 nipples. This could be, for example, 7 lines of pipe with 12 nipples each. (Source: Document 2.4.2)"
+  },
+  {
+    "intent": "heating_solution_cold_chicks",
+    "questions": [
+      "My chicks are cold, what should I use to heat them?",
+      "How to warm up cold baby chicks?",
+      "What equipment provides heat for chicks?",
+      "Solutions for heating the brooder.",
+      "My chicks are chilly, what do I do?",
+      "Best way to heat a broiler house for babies."
+    ],
+    "answer": "You should use an electric brooder or gas heater. Ensure the brooding area is properly enclosed, and the temperature at chick height is 34°C. (Source: Document 2.5 & 3.1)"
+  },
+  {
+    "intent": "cooling_solution_hot_weather",
+    "questions": [
+      "It's very hot in Manzini, how can I cool my chickens?",
+      "Cooling methods for poultry in heat.",
+      "How to reduce temperature in chicken house?",
+      "What to do when it's too hot for broilers?",
+      "Preventing heat stress in hot weather.",
+      "Best cooling systems for poultry."
+    ],
+    "answer": "Use cooling systems like fans, evaporative pads, or fogging/misting. Ensure curtains are fully open for maximum air flow. The document mentions these under 'Power' ventilation. (Source: Document 1.2.2 & 2.5)"
+  },
+  {
+    "intent": "chick_placement_program",
+    "questions": [
+      "What is the chick placement programme?",
+      "What is the plan for when chicks arrive?",
+      "What preparations are needed for new chicks?",
+      "What is a placement program?",
+      "Schedule for receiving day-old chicks.",
+      "What to plan for chick arrival day?"
+    ],
+    "answer": "It is a planned schedule of activities to be completed before the chicks arrive, including cleaning, disinfecting, preheating the house, setting up equipment, and preparing water and feed. (Source: Document 3.1)"
+  },
+  {
+    "intent": "preheating_duration",
+    "questions": [
+      "How long before chick arrival should the house be preheated?",
+      "When to start heating the brooder house?",
+      "How early should I warm up the house?",
+      "Minimum preheating time before chicks come.",
+      "Duration for preheating poultry house.",
+      "Should I heat the house one day before?"
+    ],
+    "answer": "The house should be preheated for a minimum of 12 to 24 hours prior to chick arrival to ensure the litter and air reach the correct temperature. (Source: Document 3.1)"
+  },
+  {
+    "intent": "placement_air_temperature",
+    "questions": [
+      "What is the recommended air temperature at chick placement?",
+      "What temperature should the air be for new chicks?",
+      "How warm should the house be when chicks arrive?",
+      "Ideal air temperature for day-old chicks.",
+      "Optimal temperature for chick placement.",
+      "Correct thermometer reading for new birds."
+    ],
+    "answer": "The recommended air temperature is 34°C, measured at chick height in the area where feed and water are positioned. (Source: Document 3.1)"
+  },
+  {
+    "intent": "placement_litter_temperature",
+    "questions": [
+      "What is the recommended litter temperature at placement?",
+      "How warm should the bedding be for new chicks?",
+      "What temperature should the floor be?",
+      "Ideal litter temperature for day-olds.",
+      "Checking floor temperature for chicks.",
+      "How warm should the wood shavings be?"
+    ],
+    "answer": "The recommended litter temperature is 32 – 34 °C. (Source: Document 3.1)"
+  },
+  {
+    "intent": "placement_humidity",
+    "questions": [
+      "What is the recommended relative humidity at placement?",
+      "What humidity level is best for new chicks?",
+      "How moist should the air be for babies?",
+      "Ideal RH percentage at placement.",
+      "Correct humidity for day-old chicks.",
+      "What should the hygrometer read for chicks?"
+    ],
+    "answer": "The recommended relative humidity (RH) is 30 – 50%. (Source: Document 3.1)"
+  },
+  {
+    "intent": "brooding_stocking_density",
+    "questions": [
+      "What is the recommended stocking density for brooding?",
+      "How many chicks per square meter?",
+      "What density for baby chicks?",
+      "Stocking rate for brooder area.",
+      "How much space for day-old chicks?",
+      "Number of chicks per m2 in brooder."
+    ],
+    "answer": "The recommended stocking density is 50 birds or less per square meter. (Source: Document 3.1)"
+  },
+  {
+    "intent": "litter_material_depth",
+    "questions": [
+      "What material is recommended for litter and at what depth?",
+      "What bedding to use and how deep?",
+      "Type and depth of litter for chicks.",
+      "Best litter material and depth.",
+      "How deep should wood shavings be?",
+      "What to use for floor bedding and how much?"
+    ],
+    "answer": "Wood shavings are recommended, spread evenly at a depth of 8-10 cm. (Source: Document 3.1)"
+  },
+  {
+    "intent": "brooder_setup_arrangement",
+    "questions": [
+      "How should chick paper and water founts be arranged?",
+      "How to arrange the brooder area?",
+      "Setup for chick papers and drinkers.",
+      "Placement of paper and water founts.",
+      "How to organize the brooding space?",
+      "Best layout for baby chick equipment."
+    ],
+    "answer": "Place alternate rows of chick paper and chick founts as per recommendations within the brooding area. (Source: Document 3.1)"
+  },
+  {
+    "intent": "water_preparation_timing",
+    "questions": [
+      "When should water be placed in the founts before arrival?",
+      "How soon before chicks should water be ready?",
+      "When to put water in the drinkers?",
+      "Timing for preparing chick water.",
+      "How many hours before placement to add water?",
+      "When to fill water founts before chicks come?"
+    ],
+    "answer": "Put water with a vitamin solution in the founts 2-3 hours before chick placement. (Source: Document 3.1)"
+  },
+  {
+    "intent": "chick_weight_sampling",
+    "questions": [
+      "What percentage of chicks should be weighed upon arrival?",
+      "How many chicks to weigh when they arrive?",
+      "Sampling rate for chick weighing.",
+      "How to check average day-old weight?",
+      "What percent of birds should be weighed?",
+      "How many chicks to sample for weight?"
+    ],
+    "answer": "Sample at least 2-5% of the chicks to calculate the average weight. (Source: Document 3.2)"
+  },
+  {
+    "intent": "chick_arrival_first_step",
+    "questions": [
+      "What is the first thing to do when chicks arrive?",
+      "First action when chicks are delivered.",
+      "What to do immediately with new chicks?",
+      "How to handle chicks upon arrival?",
+      "Priority when chicks arrive at farm.",
+      "Step one when receiving day-old chicks."
+    ],
+    "answer": "Unload and place the chicks on the feed quickly to encourage them to start eating and drinking immediately. (Source: Document 3.2)"
+  },
+  {
+    "intent": "healthy_chick_characteristics",
+    "questions": [
+      "What are the signs of a healthy day-old chick?",
+      "How to identify a healthy baby chick?",
+      "What does a good quality chick look like?",
+      "Characteristics of healthy day-olds.",
+      "How to tell if chicks are healthy?",
+      "Signs of good chick quality."
+    ],
+    "answer": "A healthy chick is active with bright eyes wide open, has strong and shiny shins, a healed navel, no physical defects, no pathogens, and good maternal immunity. (Source: Document 3.3)"
+  },
+  {
+    "intent": "brooding_ventilation_importance",
+    "questions": [
+      "Why is ventilation important during brooding?",
+      "Why do chicks need good ventilation?",
+      "Importance of air flow for babies.",
+      "Why ventilate the brooder house?",
+      "Reasons for ventilation during brooding.",
+      "What happens without proper chick ventilation?"
+    ],
+    "answer": "Ventilation without a draught is required to provide fresh air and remove waste gas, excess moisture, and heat. Poor ventilation can lead to heart failure (flip-overs) and ascites (water belly). (Source: Document 3.4)"
+  },
+  {
+    "intent": "temperature_too_low_signs",
+    "questions": [
+      "What are the signs of temperatures being too low?",
+      "How to tell if chicks are too cold?",
+      "Signs of inadequate heating.",
+      "What indicates the brooder is too cold?",
+      "How chicks behave when too cold.",
+      "Symptoms of low temperature in chicks."
+    ],
+    "answer": "Chicks will huddle tightly together under the brooder, peep loudly, and refuse to eat. (Source: Document 4 - 'What the chicks are telling you!!')"
+  },
+  {
+    "intent": "temperature_too_high_signs",
+    "questions": [
+      "What are the signs of temperatures being too high?",
+      "How to tell if chicks are too hot?",
+      "Signs of excessive heating.",
+      "What indicates the brooder is too hot?",
+      "How chicks behave when too hot.",
+      "Symptoms of high temperature in chicks."
+    ],
+    "answer": "Chicks will disperse away from the brooder, breathe rapidly with open beaks, and have a poor appetite. (Source: Document 4 - 'What the chicks are telling you!!')"
+  },
+  {
+    "intent": "temperature_ideal_signs",
+    "questions": [
+      "What are the signs of temperatures being just right?",
+      "How to tell if chicks are comfortable?",
+      "Signs of perfect temperature.",
+      "What indicates the brooder temperature is correct?",
+      "How chicks behave when temperature is ideal.",
+      "Symptoms of proper heating in chicks."
+    ],
+    "answer": "Chicks are evenly dispersed around and under the brooder. They are quieter, running around, and eating and drinking in a normal manner. (Source: Document 4 - 'What the chicks are telling you!!')"
+  },
+  {
+    "intent": "draft_signs",
+    "questions": [
+      "What are the signs of a draught?",
+      "How to tell if there is a draft?",
+      "Signs of cold air movement.",
+      "What indicates a draft in the brooder?",
+      "How chicks behave when there's a draft.",
+      "Symptoms of drafty conditions."
+    ],
+    "answer": "Chicks will disperse to one side away from the brooder to avoid the cold air flow. (Source: Document 4 - 'What the chicks are telling you!!')"
+  },
+  {
+    "intent": "ventilation_functions",
+    "questions": [
+      "What are the functions of ventilation?",
+      "What does ventilation do?",
+      "Purpose of poultry house ventilation.",
+      "Why ventilate a chicken house?",
+      "Benefits of proper ventilation.",
+      "What ventilation accomplishes."
+    ],
+    "answer": "The functions are to maintain air quality, regulate temperature, and remove excess moisture and gases. (Source: Document 4 - 'FUNCTIONS OF VENTILATION')"
+  },
+  {
+    "intent": "good_litter_characteristics",
+    "questions": [
+      "What are the characteristics of good litter?",
+      "What makes good bedding material?",
+      "Qualities of optimal litter.",
+      "How to identify good litter?",
+      "What to look for in poultry bedding.",
+      "Properties of quality litter material."
+    ],
+    "answer": "Good litter has good moisture absorption, is bio-degradable, provides bird comfort, has a low dust level, is free from contaminants, and is consistently available from a bio-secure source. (Source: Document 4 - 'Litter Management')"
+  },
+  {
+    "intent": "first_day_consumption",
+    "questions": [
+      "How much feed and water must a chick consume in its first 24 hours?",
+      "What should chicks eat and drink in first day?",
+      "First 24-hour consumption goals.",
+      "How much should babies eat and drink initially?",
+      "Day one feed and water targets.",
+      "Initial consumption requirements for chicks."
+    ],
+    "answer": "In the first 24 hours, a chick needs to consume 20-25% of its own body weight in feed and 40-50% in water. (Source: Document 4)"
+  },
+  {
+    "intent": "seven_day_weight_target",
+    "questions": [
+      "What is the weight gain target for seven days?",
+      "What weight should chicks be at 7 days?",
+      "Seven-day growth target.",
+      "How much should chicks weigh after one week?",
+      "Expected weight gain by day 7.",
+      "What is the 7-day performance goal?"
+    ],
+    "answer": "The objective is to achieve 4-5 times the day-old weight at seven days. (Source: Document 4)"
+  },
+  {
+    "intent": "pre_arrival_checklist",
+    "questions": [
+      "My chicks are coming tomorrow, what should I do today?",
+      "Last day preparations before chick arrival.",
+      "Checklist for day before chicks come.",
+      "What to do 24 hours before placement?",
+      "Final preparations before receiving chicks.",
+      "Tasks to complete before chick delivery."
+    ],
+    "answer": "Today, you must: 1) Ensure the house is clean and disinfected, 2) Spread 8-10cm of wood shavings, 3) Set up chick papers and founts, 4) Start preheating the house to reach 34°C, 5) Fill feeders with starter crumbles and founts with water/vitamins. (Source: Document 3.1)"
+  },
+  {
+    "intent": "check_house_temperature",
+    "questions": [
+      "How do I know if the house is warm enough for the babies?",
+      "How to verify brooder temperature is correct?",
+      "Checking if house is warm enough.",
+      "How to measure temperature for chicks?",
+      "Verifying proper heating before arrival.",
+      "How to confirm brooder is at right temperature?"
+    ],
+    "answer": "Use a thermometer at chick height; it should read 34°C. Also, observe chick behavior once they arrive: even distribution and quiet activity mean it's correct. (Source: Document 3.1 & 4)"
+  },
+  {
+    "intent": "wood_shavings_depth",
+    "questions": [
+      "How deep should my wood shavings be?",
+      "What depth for wood shaving bedding?",
+      "How thick should litter layer be?",
+      "Proper depth for wood shavings.",
+      "How many centimeters of bedding?",
+      "Optimal wood shavings thickness."
+    ],
+    "answer": "The wood shavings should be spread to a depth of 8-10 cm. (Source: Document 3.1)"
+  },
+  {
+    "intent": "chicks_huddling_solution",
+    "questions": [
+      "The chicks are huddled together under the heater and making noise, what's wrong?",
+      "Why are chicks huddled and peeping?",
+      "What does huddling under brooder mean?",
+      "Chicks crowded together making noise - why?",
+      "How to fix huddling chicks?",
+      "What causes chicks to pile up?"
+    ],
+    "answer": "This means the temperature is too low. You need to increase the heat in the brooding area immediately. (Source: Document 4)"
+  },
+  {
+    "intent": "chicks_spreading_solution",
+    "questions": [
+      "The chicks are all spread out to the corners and breathing fast, what should I do?",
+      "Why are chicks in corners breathing heavily?",
+      "What does spreading away from heat mean?",
+      "Chicks avoiding brooder and panting - why?",
+      "How to fix chicks spreading to corners?",
+      "What causes chicks to avoid heat source?"
+    ],
+    "answer": "This means the temperature is too high. You need to reduce the heat source or increase ventilation slightly to cool the area down. (Source: Document 4)"
+  },
+  {
+    "intent": "chicks_ideal_behavior",
+    "questions": [
+      "The chicks are sleeping quietly and evenly spread out, is this good?",
+      "Is even distribution of chicks a good sign?",
+      "What does quiet, spread out chicks indicate?",
+      "Is this normal chick behavior?",
+      "What ideal chick behavior looks like.",
+      "How to know if chicks are comfortable?"
+    ],
+    "answer": "Yes, this is perfect. It means the temperature is just right and the chicks are comfortable. (Source: Document 4)"
+  },
+  {
+    "intent": "ammonia_smell_response",
+    "questions": [
+      "There's a strong smell of ammonia in my house, what does it mean?",
+      "What causes ammonia smell in chicken house?",
+      "Why does it smell like ammonia?",
+      "What does strong ammonia odor indicate?",
+      "How to fix ammonia smell?",
+      "What ammonia smell means for ventilation."
+    ],
+    "answer": "A strong ammonia smell means ventilation is inadequate and moisture is building up in the litter. Increase ventilation immediately to remove the stale, humid air. (Source: Document 6.5)"
+  },
+  {
+    "intent": "wet_litter_solution",
+    "questions": [
+      "My litter is getting wet, what can I do?",
+      "How to fix wet bedding?",
+      "What causes wet litter?",
+      "How to deal with damp wood shavings?",
+      "Solutions for wet poultry litter.",
+      "How to keep litter dry?"
+    ],
+    "answer": "Remove wet patches immediately and replace them with fresh, dry bedding. Check for water spillage from drinkers and improve ventilation to help dry the litter. (Source: Document 6 - 'Hygiene Practices')"
+  },
+  {
+    "intent": "first_week_importance",
+    "questions": [
+      "Why is the first week so important for my broilers?",
+      "Why does the first week matter so much?",
+      "Importance of week one for broilers.",
+      "Why focus on the first seven days?",
+      "What makes the first week critical?",
+      "Why is early brooding so important?"
+    ],
+    "answer": "The brooding period is the most important period of the chick's life. The first week is the most important week, and day one is the most important day. Good start determines the development of the immune system and digestive tract, impacting overall growth and health for the entire cycle. (Source: Document 3.5)"
+  },
+  {
+    "intent": "feed_definition",
+    "questions": [
+      "What is the definition of feed for broilers?",
+      "What is broiler feed?",
+      "How is feed defined for chickens?",
+      "What constitutes poultry feed?",
+      "Meaning of feed in broiler production.",
+      "What is included in broiler feed?"
+    ],
+    "answer": "Feed is the nutritionally balanced diet that fulfills all the physiological demands of the growing broiler. (Source: Document 5)"
+  },
+  {
+    "intent": "feed_cost_percentage",
+    "questions": [
+      "What percentage of operational costs does feed constitute?",
+      "How much of costs is feed?",
+      "What percent of expenses is chicken feed?",
+      "Feed as proportion of total costs.",
+      "How much does feed contribute to expenses?",
+      "What percentage of budget goes to feed?"
+    ],
+    "answer": "Feed constitutes about 75% of the operational costs in broiler production. (Source: Document 5)"
+  },
+  {
+    "intent": "ad_libitum_meaning",
+    "questions": [
+      "What does ad libitum feeding mean?",
+      "What is ad libitum?",
+      "Meaning of ad libitum feeding.",
+      "How does ad libitum feeding work?",
+      "What is free-choice feeding?",
+      "Explain ad libitum in poultry feeding."
+    ],
+    "answer": "Ad libitum means feed is available at all times, so birds can eat whenever they want. It is not the same as unlimited; it means continuous access to a balanced diet. (Source: Document 5)"
+  },
+  {
+    "intent": "total_feed_consumption",
+    "questions": [
+      "How much feed does a broiler consume in 42 days?",
+      "Total feed per bird to market weight.",
+      "How much feed needed for one broiler?",
+      "Feed consumption per chicken to harvest.",
+      "Total feed requirement per bird.",
+      "How many kg of feed for one broiler?"
+    ],
+    "answer": "Each broiler consumes about 3 to 3.5kg of feed in 42 days. (Source: Document 5)"
+  },
+  {
+    "intent": "two_stage_feeding",
+    "questions": [
+      "Describe the two-stage feeding program.",
+      "What is two-stage fee
