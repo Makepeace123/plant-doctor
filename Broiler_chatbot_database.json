@@ -238,9 +238,7 @@
       "What dictates which equipment I need?"
     ],
     "answer": "The type and design are determined by the morphology and behavior of the chicken. The number of equipment is determined by the population density and average size of the chicken at full growth. (Source: Document 2.1)"
-  }
-]
-,
+  },
   {
     "intent": "overcrowding_effects",
     "questions": [
@@ -480,9 +478,7 @@
       "Optimal drinker type for large chickens."
     ],
     "answer": "For large broilers, automatic bell drinkers, nipple drinkers, or cup drinkers are most efficient. Nipple and cup systems help keep water cleaner. (Source: Document 2.4.2)"
-  }
-]
-,
+  },
   {
     "intent": "calculate_nipple_drinkers",
     "questions": [
@@ -931,4 +927,960 @@
     "intent": "two_stage_feeding",
     "questions": [
       "Describe the two-stage feeding program.",
-      "What is two-stage fee
+      "What is two-stage feeding?",
+      "How does two-stage feeding work?",
+      "Explain the two-phase feeding program.",
+      "What are the two stages of broiler feeding?",
+      "How to feed in two stages?"
+    ],
+    "answer": "Broiler Starter Crumbles: Days 1-21 (3 bags of 50kg per 100 birds). Broiler Finisher Pellets: Days 21-42 (5 bags of 50kg per 100 birds). (Source: Document 5 - 'Two stage Feeding' table)"
+  },
+  {
+    "intent": "three_stage_feeding",
+    "questions": [
+      "Describe the three-stage feeding program.",
+      "What is three-stage feeding?",
+      "How does three-stage feeding work?",
+      "Explain the three-phase feeding program.",
+      "What are the three stages of broiler feeding?",
+      "How to feed in three stages?"
+    ],
+    "answer": "Broiler Starter Crumbles: Days 1-21 (3 bags of 50kg). Broiler Grower Pellets: Days 21-35 (3 bags of 50kg). Broiler Finisher Pellets: Days 35-42 (2 bags of 50kg). (Source: Document 5 - 'Three Stage Feeding' table)"
+  },
+  {
+    "intent": "mash_disadvantages",
+    "questions": [
+      "What are the disadvantages of feeding mash?",
+      "What's wrong with mash feed?",
+      "Problems with mash formulation.",
+      "Why not use mash for broilers?",
+      "Drawbacks of mash feed.",
+      "Cons of using mash."
+    ],
+    "answer": "Mash is wasteful (floor spillage is common), reclaiming it from the floor is impossible, and chickens take too long to fill their crop, which is energy-taxing. (Source: Document 5)"
+  },
+  {
+    "intent": "pellets_advantages",
+    "questions": [
+      "What are the advantages of feeding pellets?",
+      "Why use pellet feed?",
+      "Benefits of pelleted feed.",
+      "Advantages of pellets over mash.",
+      "Why pellets are better for broilers?",
+      "Pros of using pelleted feed."
+    ],
+    "answer": "Pellets are easy to pick up, efficient to use, and floor reclaiming is easy, reducing waste. (Source: Document 5)"
+  },
+  {
+    "intent": "water_importance",
+    "questions": [
+      "Why is water the most essential nutrient?",
+      "Why is water so important for chickens?",
+      "What makes water the most critical nutrient?",
+      "Why focus on water quality?",
+      "Importance of water in poultry production.",
+      "Why is water more important than feed?"
+    ],
+    "answer": "Water is necessary for all physiological and reproductive functions in the bird's body. (Source: Document 5)"
+  },
+  {
+    "intent": "water_feed_ratio",
+    "questions": [
+      "How much do broilers drink compared to what they eat?",
+      "What is the water to feed ratio?",
+      "How much water vs feed consumption?",
+      "Water intake compared to feed intake.",
+      "Do chickens drink more than they eat?",
+      "What is the drinking to feeding ratio?"
+    ],
+    "answer": "Broilers drink twice as much as they feed, by weight. (Source: Document 5)"
+  },
+  {
+    "intent": "water_quality_standard",
+    "questions": [
+      "What is the required quality of water for broilers?",
+      "What quality water should chickens have?",
+      "Water standards for poultry.",
+      "How good should drinking water be?",
+      "What is acceptable water quality for broilers?",
+      "What makes water suitable for chickens?"
+    ],
+    "answer": "Water should be of human consumption quality (good taste, temperature, look, and smell). You should get your water from the same source as the chickens to test its quality. (Source: Document 5)"
+  },
+  {
+    "intent": "feed_cost_calculation",
+    "questions": [
+      "How much will I spend on feed for 100 chickens?",
+      "Feed cost for 100 broilers.",
+      "How to calculate feed expense for 100 birds?",
+      "What is the feed budget for 100 chickens?",
+      "Estimating feed costs for a hundred broilers.",
+      "How much money for feed per 100 birds?"
+    ],
+    "answer": "For 100 birds, you will need approximately 8 bags of feed (3+5 for two-stage). The cost will depend on the local price per bag. Since feed is 75% of cost, this is your main expense. (Source: Document 5)"
+  },
+  {
+    "intent": "continuous_feeding",
+    "questions": [
+      "Should I always have feed in front of the chickens?",
+      "Do broilers need constant access to feed?",
+      "Should feed be available all the time?",
+      "Is continuous feeding necessary?",
+      "How often should I feed broilers?",
+      "Do chickens need feed available 24/7?"
+    ],
+    "answer": "Yes, broilers are fed ad libitum, meaning feed should be available at all times to support their rapid growth. (Source: Document 5)"
+  },
+  {
+    "intent": "reduce_feed_waste",
+    "questions": [
+      "My chickens are wasting a lot of feed on the floor, what can I do?",
+      "How to prevent feed waste?",
+      "Solutions for feed spillage.",
+      "How to reduce wasted feed?",
+      "What causes feed waste and how to stop it?",
+      "How to minimize floor feed loss?"
+    ],
+    "answer": "Ensure your feeders are adjusted to the right height (at the bird's back level) and are not overfilled. Switching from mash to pellets can also significantly reduce waste. (Source: Document 5)"
+  },
+  {
+    "intent": "starter_finisher_switch_time",
+    "questions": [
+      "When should I change from starter to finisher feed?",
+      "When to switch to finisher feed?",
+      "Right time to change feed types.",
+      "How old for finisher feed?",
+      "When do broilers get finisher feed?",
+      "What age to switch from starter to finisher?"
+    ],
+    "answer": "In a two-stage program, change from starter to finisher feed at day 21. (Source: Document 5 - 'Two stage Feeding' table)"
+  },
+  {
+    "intent": "feeding_program_choice",
+    "questions": [
+      "Is it better to use a two-stage or three-stage feeding program?",
+      "Which feeding program is better?",
+      "Two-stage vs three-stage feeding.",
+      "What feeding program should I use?",
+      "Which is more effective: 2-stage or 3-stage?",
+      "How to choose between feeding programs?"
+    ],
+    "answer": "A three-stage program (starter, grower, finisher) can be more precise for specific growth phases, but a two-stage program is simpler and very effective. Most farmers in Eswatini use the two-stage program for simplicity. (Source: Document 5)"
+  },
+  {
+    "intent": "low_water_consumption_causes",
+    "questions": [
+      "My chickens are not drinking enough, what could be wrong?",
+      "Why are birds not drinking water?",
+      "Causes of low water intake.",
+      "What reduces water consumption?",
+      "Why chickens might not drink enough?",
+      "How to increase water consumption?"
+    ],
+    "answer": "Check water quality (smell, taste), water temperature (too hot or cold), water pressure (for nipples), and the height of the drinkers. Also, check for signs of disease. (Source: Document 5 + Standard Practice)"
+  },
+  {
+    "intent": "chlorinated_water_safety",
+    "questions": [
+      "The water from my tap smells like chlorine, is it safe for my birds?",
+      "Is chlorinated water safe for chickens?",
+      "Can I use chlorinated tap water?",
+      "Is chlorine in water harmful to birds?",
+      "What about chlorinated water for poultry?",
+      "How to deal with chlorinated water?"
+    ],
+    "answer": "For daily drinking, it is usually fine. However, if you are vaccinating through water, you must remove the chlorine as it will kill the vaccine. Use a dechlorination tab or boil and cool the water first. (Source: Document 7 - 'Handling & administration of vaccines')"
+  },
+  {
+    "intent": "biosecurity_definition",
+    "questions": [
+      "What is biosecurity?",
+      "Define biosecurity in poultry farming.",
+      "What does biosecurity mean for chickens?",
+      "Explain biosecurity for broilers.",
+      "What is farm biosecurity?",
+      "Meaning of biosecurity in chicken production."
+    ],
+    "answer": "Biosecurity is a set of practices designed to prevent the introduction and spread of diseases onto a farm. (Source: Document 6 - Headline)"
+  },
+  {
+    "intent": "farm_organization_biosecurity",
+    "questions": [
+      "How should houses be organized to maintain biosecurity?",
+      "Farm layout for disease prevention.",
+      "How to organize poultry houses for biosecurity?",
+      "Proper farm organization to prevent disease.",
+      "Biosecurity through farm layout.",
+      "How to arrange houses for disease control?"
+    ],
+    "answer": "Space houses 50m apart or step stagger them. Assign workers to specific houses, or have them work from youngest to oldest birds or from healthy to sick birds. (Source: Document 6.1)"
+  },
+  {
+    "intent": "farm_worker_uniform",
+    "questions": [
+      "What should a farm worker wear?",
+      "Proper clothing for poultry farm workers.",
+      "What to wear in broiler houses?",
+      "Farm uniform requirements.",
+      "Protective clothing for chicken farming.",
+      "What gear should farm workers use?"
+    ],
+    "answer": "Workers should wear a farm uniform (overalls and gum boots) dedicated to the farm or specific house. (Source: Document 6.1)"
+  },
+  {
+    "intent": "visitor_policy",
+    "questions": [
+      "What is the protocol for visitors?",
+      "Visitor rules for poultry farm.",
+      "Can visitors enter chicken houses?",
+      "What are the visitor restrictions?",
+      "How to handle farm visitors?",
+      "Visitor policy for biosecurity."
+    ],
+    "answer": "No visitors should be allowed into the broiler house. The document states clearly: 'The broiler house is not a tourist site.' (Source: Document 6.1)"
+  },
+  {
+    "intent": "footbath_purpose_preparation",
+    "questions": [
+      "What is the purpose of a footbath and what should be in it?",
+      "How to make and use a footbath?",
+      "What goes in disinfectant footbath?",
+      "Purpose of poultry footbath.",
+      "How to prepare foot dip?",
+      "Footbath solution and use."
+    ],
+    "answer": "A footbath disinfects boots to prevent carrying diseases between houses. The document recommends Virogon at a mix of 50g/5L water. (Source: Document 6.1 & 7)"
+  },
+  {
+    "intent": "entering_house_procedure",
+    "questions": [
+      "What is the first thing you should do when entering the broiler house?",
+      "Proper procedure for entering chicken house.",
+      "Steps to enter broiler house safely.",
+      "What to do before entering poultry house?",
+      "Entry protocol for biosecurity.",
+      "First action when going into broiler house."
+    ],
+    "answer": "Dip your feet in the footbath. Then, knock on the door to avoid frightening the birds before entering. (Source: Document 6.2)"
+  },
+  {
+    "intent": "daily_hygiene_practices",
+    "questions": [
+      "What daily hygiene practices must be followed?",
+      "Daily cleaning routines for broiler house.",
+      "What hygiene practices are needed daily?",
+      "Everyday biosecurity practices.",
+      "Daily farm hygiene checklist.",
+      "Routine cleaning and disinfection practices."
+    ],
+    "answer": "Practice daily cleanliness (wash hands), use the footbath, remove dead birds immediately, remove wet litter, wash drinkers daily, and disinfect them weekly. (Source: Document 6.2)"
+  },
+  {
+    "intent": "poor_ventilation_consequences",
+    "questions": [
+      "What are the disadvantages of improper ventilation?",
+      "What happens with bad ventilation?",
+      "Consequences of poor air circulation.",
+      "Risks of inadequate ventilation.",
+      "Problems caused by poor ventilation.",
+      "Effects of insufficient air flow."
+    ],
+    "answer": "Poor air quality can cause an increase in respiratory problems, potential blindness, breast blisters, hard foot pads, ascites (water belly), and lower profitability. (Source: Document 6.5)"
+  },
+  {
+    "intent": "check_ventilation_adequacy",
+    "questions": [
+      "How can I practically check if ventilation is adequate?",
+      "How to test if ventilation is sufficient?",
+      "Practical ventilation check method.",
+      "How to know if air quality is good?",
+      "Simple test for proper ventilation.",
+      "Checking air quality in chicken house."
+    ],
+    "answer": "Go to knee height (bird breathing level) and inhale. If you smell a fairly strong ammonia smell that burns your nose and eyes, then ventilation is inadequate. (Source: Document 6.5)"
+  },
+  {
+    "intent": "hot_weather_curtains",
+    "questions": [
+      "Should curtains be open or closed in hot weather?",
+      "Curtain management in heat.",
+      "What to do with curtains in hot weather?",
+      "How to set curtains during heat?",
+      "Curtain position in summer.",
+      "Ventilation curtains in hot conditions."
+    ],
+    "answer": "In hot weather, open the curtains to allow maximum air flow for cooling. (Source: Document 6.5)"
+  },
+  {
+    "intent": "cold_weather_curtains",
+    "questions": [
+      "Should curtains be open or closed in cold weather?",
+      "Curtain management in cold.",
+      "What to do with curtains in cold weather?",
+      "How to set curtains during cold?",
+      "Curtain position in winter.",
+      "Ventilation curtains in cold conditions."
+    ],
+    "answer": "In cold weather, lower the curtains to conserve heat while still allowing some ventilation to remove moisture. (Source: Document 6.5)"
+  },
+  {
+    "intent": "prevention_vs_cure",
+    "questions": [
+      "Why is prevention better than cure in broiler farming?",
+      "Why prevent rather than treat diseases?",
+      "Benefits of disease prevention.",
+      "Advantages of preventive measures.",
+      "Why prevention is cheaper than treatment?",
+      "Importance of preventive health."
+    ],
+    "answer": "It is cost-effective (saves money on treatment), leads to the best produce outcome due to efficient nutrient use, and results in happy customers with best quality produce. (Source: Document 7 - 'IMPORTANCE OF GOOD BROILER HEALTH')"
+  },
+  {
+    "intent": "housing_design_biosecurity",
+    "questions": [
+      "How does housing design contribute to biosecurity?",
+      "House design for disease prevention.",
+      "Biosecurity features in housing design.",
+      "How building design helps biosecurity?",
+      "Architectural biosecurity measures.",
+      "Design elements that prevent disease."
+    ],
+    "answer": "It keeps pests and rodents out (e.g., with a super block wall), keeps rainwater out to avoid wet feed and disease transfer, and ensures proper air circulation to reduce airborne diseases. (Source: Document 7 - 'Bio-security')"
+  },
+  {
+    "intent": "between_flocks_cleaning",
+    "questions": [
+      "How should a house be cleaned and disinfected between flocks?",
+      "Cleaning procedure between batches.",
+      "How to prepare house for new flock?",
+      "Inter-flock cleaning and disinfection.",
+      "House preparation between cycles.",
+      "Cleaning after selling birds before new chicks."
+    ],
+    "answer": "Clean with soap (Biogene super). Then disinfect and fumigate the house and utensils (Virukill – 100ml/15L water). Disinfect equipment (Virukill – 25ml/10L water). Allow 1-2 weeks of air circulation (downtime) before new chicks arrive. (Source: Document 7 - 'Bio-security')"
+  },
+  {
+    "intent": "viral_diseases_list",
+    "questions": [
+      "List common viruses that cause broiler diseases.",
+      "What viral diseases affect broilers?",
+      "Virus diseases in chickens.",
+      "Common viral infections in broilers.",
+      "Which diseases are caused by viruses?",
+      "Viral pathogens in poultry."
+    ],
+    "answer": "Viruses cause New Castle Disease (ND), Infectious Bronchitis (IB), Gumboro (Infectious Bursal Disease), and Fowl Pox. (Source: Document 7 - 'MICROORGANISMS WHICH CAUSE DISEASES')"
+  },
+  {
+    "intent": "bacterial_diseases_list",
+    "questions": [
+      "List common bacteria that cause broiler diseases.",
+      "What bacterial diseases affect broilers?",
+      "Bacteria diseases in chickens.",
+      "Common bacterial infections in broilers.",
+      "Which diseases are caused by bacteria?",
+      "Bacterial pathogens in poultry."
+    ],
+    "answer": "Bacteria cause Infectious Coryza and Fowl Cholera. (Source: Document 7 - 'MICROORGANISMS WHICH CAUSE DISEASES')"
+  },
+  {
+    "intent": "newcastle_symptoms",
+    "questions": [
+      "What are the symptoms of Newcastle Disease?",
+      "How to identify Newcastle disease?",
+      "Signs of Newcastle in chickens.",
+      "Newcastle disease symptoms.",
+      "What does Newcastle look like?",
+      "How to recognize Newcastle disease?"
+    ],
+    "answer": "Symptoms include respiratory stress (sneezing, gurgling), watery greenish diarrhea, twisted neck, tremors, paralysis, and high mortality (80-90%). (Source: Document 7)"
+  },
+  {
+    "intent": "coryza_symptoms",
+    "questions": [
+      "What are the symptoms of Infectious Coryza?",
+      "How to identify Coryza?",
+      "Signs of Infectious Coryza in chickens.",
+      "Coryza disease symptoms.",
+      "What does Coryza look like?",
+      "How to recognize Infectious Coryza?"
+    ],
+    "answer": "Symptoms include decreased activity, nasal discharge, and facial swelling. (Source: Document 7)"
+  },
+  {
+    "intent": "gumboro_symptoms",
+    "questions": [
+      "What are the symptoms of Gumboro?",
+      "How to identify Gumboro disease?",
+      "Signs of Infectious Bursal Disease.",
+      "Gumboro symptoms in chickens.",
+      "What does Gumboro look like?",
+      "How to recognize Gumboro?"
+    ],
+    "answer": "Symptoms include dehydration, watery diarrhea, and ruffled feathers. (Source: Document 7)"
+  },
+  {
+    "intent": "coccidiosis_symptoms",
+    "questions": [
+      "What are the symptoms of Coccidiosis (Umsheka ngati)?",
+      "How to identify Coccidiosis?",
+      "Signs of Cocci in chickens.",
+      "Coccidiosis symptoms.",
+      "What does Umsheka ngati look like?",
+      "How to recognize Coccidiosis?"
+    ],
+    "answer": "Symptoms include watery diarrhea with blood stains, loss of appetite, weight loss, and ruffled feathers (kuphephetela tinswiba). (Source: Document 7)"
+  },
+  {
+    "intent": "fowl_pox_symptoms",
+    "questions": [
+      "What are the symptoms of Fowl Pox (Emangcumbula)?",
+      "How to identify Fowl Pox?",
+      "Signs of Fowl Pox in chickens.",
+      "Emangcumbula symptoms.",
+      "What does Fowl Pox look like?",
+      "How to recognize Fowl Pox?"
+    ],
+    "answer": "Symptoms include scab and wart-like lesions on the comb, wattle, face, and feet, weight loss, and loss of appetite. (Source: Document 7)"
+  },
+  {
+    "intent": "bronchitis_symptoms",
+    "questions": [
+      "What are the symptoms of Infectious Bronchitis?",
+      "How to identify Infectious Bronchitis?",
+      "Signs of IB in chickens.",
+      "Infectious Bronchitis symptoms.",
+      "What does IB look like?",
+      "How to recognize Infectious Bronchitis?"
+    ],
+    "answer": "It primarily affects the respiratory system (gasping, coughing). It has no treatment. Ensuring good ventilation and optimal temperature is key. (Source: Document 7)"
+  },
+  {
+    "intent": "disease_prevention_general",
+    "questions": [
+      "How do I keep my birds from getting sick?",
+      "How to prevent diseases in broilers?",
+      "Disease prevention methods.",
+      "Keeping chickens healthy.",
+      "How to avoid sickness in flock?",
+      "Preventing illness in broilers."
+    ],
+    "answer": "Follow strict biosecurity (footbaths, no visitors), use a complete vaccination program, provide proper feed and clean water, and maintain excellent housing management (ventilation, dry litter). (Synthesis of Documents 6 & 7)"
+  },
+  {
+    "intent": "neighbor_disease_protection",
+    "questions": [
+      "My neighbor's chickens are sick, how do I protect mine?",
+      "What to do when nearby farms have disease?",
+      "Protecting flock from neighbor's sickness.",
+      "How to prevent disease from adjacent farms?",
+      "Biosecurity when neighbors have sick birds.",
+      "Disease protection from nearby outbreaks."
+    ],
+    "answer": "Enhance your biosecurity immediately: restrict all movement between farms, ensure footbaths are fresh, change clothes before entering your house, and control rodents and insects that could carry diseases. (Source: Standard Practice)"
+  },
+  {
+    "intent": "footbath_preparation",
+    "questions": [
+      "What should I put in my footbath?",
+      "How to make footbath solution?",
+      "What disinfectant for foot dip?",
+      "Footbath chemical and concentration.",
+      "How to prepare footbath disinfectant?",
+      "What mixture for footbath?"
+    ],
+    "answer": "The document recommends Virogon at a mix of 50g per 5 litres of water. (Source: Document 7)"
+  },
+  {
+    "intent": "bad_smell_diagnosis",
+    "questions": [
+      "I entered the house and there's a bad smell, what does it mean?",
+      "What causes bad smells in chicken house?",
+      "Interpreting odors in poultry house.",
+      "What different smells indicate?",
+      "Diagnosing problems by smell.",
+      "What does house odor tell me?"
+    ],
+    "answer": "A strong ammonia smell means poor ventilation and wet litter. A rotten smell could indicate dead birds or a disease outbreak. Investigate immediately. (Source: Document 6.5)"
+  },
+  {
+    "intent": "sneezing_green_diarrhea",
+    "questions": [
+      "My chickens are sneezing and have green diarrhea, what could it be?",
+      "Sneezing with green poop diagnosis.",
+      "What disease causes sneezing and green diarrhea?",
+      "Sneezing and green droppings meaning.",
+      "Respiratory symptoms with green stool.",
+      "Identifying sickness from sneezing and green poop."
+    ],
+    "answer": "This is a classic sign of Newcastle Disease. This is a serious emergency. Isolate sick birds if possible and contact a veterinarian immediately. (Source: Document 7)"
+  },
+  {
+    "intent": "bloody_droppings",
+    "questions": [
+      "I see blood in my chicken's droppings, what is it?",
+      "Blood in poop diagnosis.",
+      "What causes bloody diarrhea in chickens?",
+      "Blood in droppings meaning.",
+      "Identifying bloody stool problem.",
+      "What disease causes blood in feces?"
+    ],
+    "answer": "This is a primary symptom of Coccidiosis (Umsheka ngati). You need to treat the flock with a coccidiostat like Tri-Methosulf. (Source: Document 7)"
+  },
+  {
+    "intent": "comb_sores",
+    "questions": [
+      "There are sores on my chicken's comb, what disease is this?",
+      "Sores on comb diagnosis.",
+      "What causes lesions on chicken's comb?",
+      "Comb sores meaning.",
+      "Identifying disease from comb lesions.",
+      "What causes scabs on comb and wattles?"
+    ],
+    "answer": "Sores and scabs on the comb and wattles are symptoms of Fowl Pox (Emangcumbula). (Source: Document 7)"
+  },
+  {
+    "intent": "sudden_death_response",
+    "questions": [
+      "My chickens are dying suddenly, what should I do?",
+      "How to respond to sudden chicken deaths?",
+      "Emergency response for sudden mortality.",
+      "What to do when birds die suddenly?",
+      "Sudden death outbreak management.",
+      "Emergency measures for sudden mortality."
+    ],
+    "answer": "This is a critical situation. Immediately contact a veterinarian for diagnosis. Check your ventilation, water quality, and for signs of poisoning. Check if vaccinations were done correctly. (Synthesis of Document 7 & Standard Practice)"
+  },
+  {
+    "intent": "vaccination_definition",
+    "questions": [
+      "What is vaccination?",
+      "Define vaccination for poultry.",
+      "What does vaccination do?",
+      "Explain how vaccination works.",
+      "Meaning of vaccination in chickens.",
+      "What is bird vaccination?"
+    ],
+    "answer": "It is the introduction of artificial immunity through a mild form of a pathogen (virus) to trigger an antibody release into the bloodstream for fighting future infection. (Source: Document 7)"
+  },
+  {
+    "intent": "vaccine_storage_temperature",
+    "questions": [
+      "At what temperature should vaccines be stored?",
+      "How to store vaccines properly?",
+      "Correct storage temperature for vaccines.",
+      "Vaccine storage requirements.",
+      "How cold to keep vaccines?",
+      "Proper vaccine storage conditions."
+    ],
+    "answer": "Vaccines should be stored at about 6 degrees Celsius (fridge door temperature). (Source: Document 7)"
+  },
+  {
+    "intent": "water_vaccination_preparation",
+    "questions": [
+      "How should birds be prepared for vaccination via water?",
+      "How to prepare birds for water vaccination?",
+      "Steps before water vaccination.",
+      "Pre-vaccination preparation for water method.",
+      "How to get birds ready for water vaccine?",
+      "Preparation for vaccination through drinking water."
+    ],
+    "answer": "Starve the birds of water for 2-3 hours before giving the vaccine to make them thirsty so they drink the vaccine water quickly. (Source: Document 7)"
+  },
+  {
+    "intent": "vaccine_water_preparation",
+    "questions": [
+      "How is water prepared for vaccination?",
+      "How to prepare water for vaccine?",
+      "Water treatment for vaccination.",
+      "Preparing drinking water for vaccine.",
+      "How to make vaccine water?",
+      "Water preparation for vaccination day."
+    ],
+    "answer": "Use clean water without chlorine (use a dechlorination tab or boil water). Clean the water fonts thoroughly before adding the vaccine water. (Source: Document 7)"
+  },
+  {
+    "intent": "vaccine_water_duration",
+    "questions": [
+      "How long should the vaccine-water be available to the birds?",
+      "How long to leave vaccine water?",
+      "Duration for vaccine water availability.",
+      "How long should birds drink vaccine water?",
+      "Time limit for vaccine in water.",
+      "How long does vaccine water last?"
+    ],
+    "answer": "It should be available for the birds to drink for at least 1 hour and 30 minutes. (Source: Document 7)"
+  },
+  {
+    "intent": "common_vaccinations",
+    "questions": [
+      "Against which diseases are broilers commonly vaccinated?",
+      "What vaccines do broilers need?",
+      "Common vaccinations for broilers.",
+      "Which diseases to vaccinate against?",
+      "Standard vaccination program diseases.",
+      "What vaccines are used for broilers?"
+    ],
+    "answer": "Broilers are commonly vaccinated against Gumboro (Nobilis Gumboro D78) and New Castle Disease (Nobilis ND Clone 30/ Lasota). (Source: Document 7)"
+  },
+  {
+    "intent": "gumboro_vaccination_schedule",
+    "questions": [
+      "On which days is the Gumboro vaccine (Nobilis D78) administered?",
+      "When to give Gumboro vaccine?",
+      "Gumboro vaccination schedule.",
+      "What days for Gumboro shot?",
+      "Gumboro vaccine timing.",
+      "When to vaccinate for Gumboro?"
+    ],
+    "answer": "It is administered on Day 14 and Day 18. (Source: Document 7)"
+  },
+  {
+    "intent": "newcastle_vaccination_schedule",
+    "questions": [
+      "On which days is the Newcastle vaccine (Nobilis ND Clone 30) administered?",
+      "When to give Newcastle vaccine?",
+      "Newcastle vaccination schedule.",
+      "What days for Newcastle shot?",
+      "Newcastle vaccine timing.",
+      "When to vaccinate for Newcastle?"
+    ],
+    "answer": "It is administered on Day 10 and Day 21. (Source: Document 7)"
+  },
+  {
+    "intent": "fowl_pox_vaccine_usage",
+    "questions": [
+      "What is Tremvac FP used for and in which birds?",
+      "Purpose of Tremvac FP vaccine.",
+      "What is Tremvac FP for?",
+      "Which birds need Tremvac FP?",
+      "Use of Fowl Pox vaccine.",
+      "When to use Tremvac FP?"
+    ],
+    "answer": "Tremvac FP is a vaccine used to prevent Fowl Pox. It is used in indigenous chickens to prevent them from spreading the disease to broilers. Vaccinate indigenous chickens between 8-16 weeks. (Source: Document 7)"
+  },
+  {
+    "intent": "medicine_as_failure",
+    "questions": [
+      "Why is the use of medicine a sign of a mistake?",
+      "Why does needing medicine indicate failure?",
+      "What does using antibiotics signify?",
+      "Why is medication use a problem?",
+      "What medicine use indicates about management?",
+      "Why are medicines a sign of poor management?"
+    ],
+    "answer": "Because it indicates a failure in prevention (biosecurity, vaccination, or management) that has allowed disease to occur. (Source: Document 7 - 'MEDICINE')"
+  },
+  {
+    "intent": "antimicrobial_resistance",
+    "questions": [
+      "What is antimicrobial resistance?",
+      "Define antibiotic resistance.",
+      "What is AMR?",
+      "Explain antimicrobial resistance.",
+      "Meaning of drug resistance in bacteria.",
+      "What happens when bacteria become resistant?"
+    ],
+    "answer": "It is when bacteria and other microbes become resistant to the medicines designed to kill them, due to overuse and misuse of antibiotics. This makes infections harder to treat in both animals and humans. (Source: Document 7)"
+  },
+  {
+    "intent": "doxymax_dosage",
+    "questions": [
+      "What is the dosage of Doxymax for 15-day-old broilers?",
+      "How to use Doxymax for 15 day olds?",
+      "Doxymax dosage for mid-age broilers.",
+      "How much Doxymax for 15-day chickens?",
+      "Doxymax administration for growers.",
+      "Dosage of Doxymax for 15 day old birds."
+    ],
+    "answer": "For 1-19 day old broilers, the dosage is 1 level measuring spoon (4g/5ml) per 40L of drinking water. (Source: Document 7)"
+  },
+  {
+    "intent": "doxymax_withdrawal",
+    "questions": [
+      "What is the meat withdrawal period for Doxymax?",
+      "How long after Doxymax until slaughter?",
+      "Doxymax withdrawal time.",
+      "When can I sell after using Doxymax?",
+      "Meat safety period after Doxymax.",
+      "How long until meat is safe after Doxymax?"
+    ],
+    "answer": "The meat withdrawal period is 9 days. This means you must wait 9 days after stopping treatment before slaughtering birds for meat. (Source: Document 7)"
+  },
+  {
+    "intent": "limoxin_dosage_withdrawal",
+    "questions": [
+      "What is the dosage and withdrawal period for Limoxin?",
+      "How to use Limoxin and withdrawal time?",
+      "Limoxin dosage and safety period.",
+      "Limoxin administration guidelines.",
+      "How much Limoxin and how long until slaughter?",
+      "Limoxin usage and withdrawal."
+    ],
+    "answer": "Dosage: 100g to 500L of water (or 10g : 50L water) for 3-5 days. Withdrawal: 6 days. (Source: Document 7)"
+  },
+  {
+    "intent": "trimenthosulf_use",
+    "questions": [
+      "What is Tri-Methosulf used for?",
+      "Purpose of Tri-Methosulf.",
+      "What does Tri-Methosulf treat?",
+      "When to use Tri-Methosulf?",
+      "Indications for Tri-Methosulf.",
+      "What diseases does Tri-Methosulf treat?"
+    ],
+    "answer": "It is used for treating bacterial infections affecting the digestive and respiratory systems, such as coryza, salmonellosis, and coccidiosis. It functions like ESB3. (Source: Document 7)"
+  },
+  {
+    "intent": "fosbac_dosage",
+    "questions": [
+      "What is the dosage for Fosbac Plus T?",
+      "How to use Fosbac Plus T?",
+      "Fosbac dosage instructions.",
+      "How much Fosbac to use?",
+      "Fosbac Plus T administration.",
+      "Dosage of Fosbac for broilers."
+    ],
+    "answer": "The dosage is 1g per 1L of water for 7 days. (Source: Document 7)"
+  },
+  {
+    "intent": "mentofin_usage",
+    "questions": [
+      "What is Mentofin and how is it used?",
+      "Purpose and use of Mentofin.",
+      "How to use Mentofin?",
+      "What is Mentofin for?",
+      "Mentofin administration guidelines.",
+      "How does Mentofin work?"
+    ],
+    "answer": "Mentofin is a blend of natural ingredients (eucalyptus, menthol) that supports respiratory health. For drinking water: 1ml dissolved in 5 liters of water for 100 birds for 3 days. (Source: Document 7)"
+  },
+  {
+    "intent": "immunovite_usage",
+    "questions": [
+      "What is Immunovite and when should it be used?",
+      "Purpose and use of Immunovite.",
+      "How to use Immunovite?",
+      "What is Immunovite for?",
+      "Immunovite administration guidelines.",
+      "When to give Immunovite?"
+    ],
+    "answer": "Immunovite is a water-soluble gel with probiotics, vitamins, electrolytes, and selenium. It helps with stress, digestion, dehydration, and immunity. Use before/after stress and during feed changes. Dosage: 35ml per 100L for 3-5 days. (Source: Document 7)"
+  },
+  {
+    "intent": "vaccine_storage_method",
+    "questions": [
+      "I bought vaccines, how do I keep them cold?",
+      "How to store vaccines properly?",
+      "Vaccine storage methods.",
+      "Keeping vaccines cold during transport.",
+      "How to maintain vaccine cold chain?",
+      "Proper vaccine storage and transport."
+    ],
+    "answer": "Store them in a refrigerator at 2-8°C. During transport, use a cooler bag with a chilled or frozen ice pack. (Source: Document 7)"
+  },
+  {
+    "intent": "newcastle_vaccination_1000_birds",
+    "questions": [
+      "How do I give my 1000 chickens the Newcastle vaccine in their water?",
+      "Newcastle vaccination for 1000 birds.",
+      "How to vaccinate large flock with water?",
+      "Water vaccination for 1000 chickens.",
+      "Mass vaccination method for Newcastle.",
+      "Administering vaccine to 1000 birds."
+    ],
+    "answer": "1) Thirst birds for 2-3h. 2) Clean fonts. 3) Use 100L of clean, chlorine-free water. 4) Dissolve the vaccine for 1000 birds in the water. 5) Pour into fonts. 6) Ensure all birds drink within 1.5 hours. (Source: Document 7 - calculation based on standard water consumption)"
+  },
+  {
+    "intent": "missed_vaccination_response",
+    "questions": [
+      "I forgot to vaccinate on day 10, what should I do?",
+      "What if I miss vaccination day?",
+      "How to handle missed vaccination?",
+      "Forgot to vaccinate - what now?",
+      "Missed vaccine schedule response.",
+      "Late vaccination procedure."
+    ],
+    "answer": "Consult a veterinarian immediately. They may advise administering the vaccine as soon as possible or using a different strategy, as the timing is critical for protection. (Source: Standard Practice)"
+  },
+  {
+    "intent": "indigenous_chicken_fowl_pox_protection",
+    "questions": [
+      "My indigenous chickens have fowl pox, how do I protect my broilers?",
+      "Protecting broilers from indigenous chicken diseases.",
+      "What to do when backyard chickens have fowl pox?",
+      "Preventing fowl pox transmission to broilers.",
+      "Biosecurity with sick indigenous chickens.",
+      "How to keep broilers safe from infected backyard birds?"
+    ],
+    "answer": "Vaccinate your healthy indigenous chickens with Tremvac FP. Strictly separate your indigenous chickens from your broilers to prevent physical contact. (Source: Document 7)"
+  },
+  {
+    "intent": "antibiotic_use_policy",
+    "questions": [
+      "My chickens are sick, can I just give them antibiotics?",
+      "Should I use antibiotics for sick chickens?",
+      "When to use antibiotics?",
+      "Proper antibiotic use policy.",
+      "Can I self-prescribe antibiotics?",
+      "When are antibiotics appropriate?"
+    ],
+    "answer": "No. First, try to diagnose the problem. Antibiotics only work against bacteria, not viruses. Incorrect use wastes money and causes antimicrobial resistance. Always consult a veterinarian for a diagnosis and correct prescription. (Source: Document 7)"
+  },
+  {
+    "intent": "doxymax_slaughter_timing",
+    "questions": [
+      "I used Doxymax, how long until I can sell my chickens?",
+      "When to slaughter after Doxymax treatment?",
+      "How long after Doxymax until safe for meat?",
+      "Selling timing after Doxymax use.",
+      "When is meat safe after Doxymax?",
+      "Post-treatment waiting period for Doxymax."
+    ],
+    "answer": "You must observe the 9-day withdrawal period after the last day of treatment. Do not sell them before this time is up. (Source: Document 7)"
+  },
+  {
+    "intent": "heat_stress_recovery",
+    "questions": [
+      "My chickens are stressed after a hot day, what can I give them?",
+      "How to help birds recover from heat stress?",
+      "Treatment for heat stressed chickens.",
+      "What to give birds after heat stress?",
+      "Recovery from heat exhaustion.",
+      "Post-heat stress care."
+    ],
+    "answer": "Add Immunovite (35ml/100L) or electrolytes to their water to help with rehydration and stress relief. (Source: Document 7)"
+  },
+  {
+    "intent": "respiratory_support",
+    "questions": [
+      "What can I add to water to help with breathing problems?",
+      "How to support birds with respiratory issues?",
+      "Natural respiratory support for chickens.",
+      "What helps with breathing difficulties?",
+      "Supportive care for respiratory problems.",
+      "Natural remedies for respiratory distress."
+    ],
+    "answer": "You can use Mentofin (1ml/5L for 100 birds) to support respiratory health. However, if breathing problems are severe, it could be IB or ND, and you must seek veterinary advice. (Source: Document 7)"
+  },
+  {
+    "intent": "records_definition",
+    "questions": [
+      "What are records?",
+      "Define record keeping in farming.",
+      "What are poultry production records?",
+      "Meaning of farm records.",
+      "What constitutes farm records?",
+      "Explanation of record keeping."
+    ],
+    "answer": "Records are an organized collection of facts and events about a project or business that reflect the true production and financial position. (Source: Document 8)"
+  },
+  {
+    "intent": "record_types",
+    "questions": [
+      "What are the two main types of records?",
+      "Types of farm records.",
+      "What kinds of records should I keep?",
+      "Categories of poultry records.",
+      "Different types of record keeping.",
+      "Classification of farm records."
+    ],
+    "answer": "The two types are I) Production records and II) Financial records. (Source: Document 8)"
+  },
+  {
+    "intent": "house_card_definition",
+    "questions": [
+      "What is a house card?",
+      "Define house card in poultry farming.",
+      "What is a production record card?",
+      "Meaning of house card.",
+      "What goes on a house card?",
+      "Explanation of poultry house card."
+    ],
+    "answer": "It is a production record kept at the broiler house, typically a card or sheet that tracks daily events like mortality, feed consumption, and medicines used. (Source: Document 8)"
+  },
+  {
+    "intent": "house_card_content",
+    "questions": [
+      "What information is typically on a house card?",
+      "What data goes on a house card?",
+      "House card content details.",
+      "What to record on production card?",
+      "Information included on house card.",
+      "What should be documented on house card?"
+    ],
+    "answer": "It includes supplier, breed, number of chicks placed, date placed, house number, and daily records of mortality, feed used, water consumption, and treatments. (Source: Document 8 - 'Typical House Card')"
+  },
+  {
+    "intent": "financial_records_purpose",
+    "questions": [
+      "What are financial records used for?",
+      "Purpose of financial records.",
+      "Why keep financial records?",
+      "What financial records accomplish.",
+      "Benefits of financial record keeping.",
+      "Use of financial documentation."
+    ],
+    "answer": "They are used to track all income and expenses (feed, chicks, medication, etc.) to calculate the profitability of the operation through a Gross Margin Analysis. (Source: Document 8)"
+  },
+  {
+    "intent": "gross_margin_analysis",
+    "questions": [
+      "What is a gross margin analysis?",
+      "Define gross margin analysis.",
+      "What is GM analysis?",
+      "Explanation of gross margin.",
+      "How to calculate gross margin?",
+      "What does gross margin analysis show?"
+    ],
+    "answer": "It is a financial calculation that subtracts the total variable costs (e.g., feed, chicks, medication) from the total revenue to determine the gross profit of a flock. (Source: Document 8 - 'Gross Margin Analysis')"
+  },
+  {
+    "intent": "record_keeping_benefits",
+    "questions": [
+      "Why should I keep records? It takes time.",
+      "Benefits of record keeping.",
+      "Advantages of keeping records.",
+      "Why is record keeping important?",
+      "What do I gain from keeping records?",
+      "Value of farm record keeping."
+    ],
+    "answer": "Records help you spot problems early (e.g., rising mortality), calculate your real profit, make better decisions for the next flock, and secure loans by proving your business is viable. (Source: Document 8 - Synthesis)"
+  },
+  {
+    "intent": "house_card_content_details",
+    "questions": [
+      "What should I write on my chicken house card?",
+      "What to record on daily basis?",
+      "Daily record keeping content.",
+      "What information to put on house card?",
+      "Details to include in production records.",
+      "How to fill out a house card?"
+    ],
+    "answer": "Write everything! Date placed, number of chicks, daily deaths, daily feed used, water consumption, vaccine and medicine dates, weather notes, and any unusual observations. 'Rather have more data than less.' (Source: Document 8)"
+  },
+  {
+    "intent": "profit_calculation_method",
+    "questions": [
+      "How do I know if I'm making a profit from my flock?",
+      "How to calculate profit from broilers?",
+      "Profit calculation method.",
+      "How to determine if flock is profitable?",
+      "Measuring profitability of broiler flock.",
+      "How to know if I'm making money?"
+    ],
+    "answer": "You need to complete a Gross Margin Analysis. Subtract all your variable costs (feed, chicks, vaccines, medicine, etc.) from the total money you get from selling the birds. The result is your gross profit. (Source: Document 8)"
+  },
+  {
+    "intent": "records_improvement_use",
+    "questions": [
+      "How can records help me improve my next batch of chickens?",
+      "Using records to improve future flocks.",
+      "How records guide improvement.",
+      "Learning from past records.",
+      "Using data to enhance future performance.",
+      "How historical records inform future decisions."
+    ],
+    "answer": "By reviewing records, you can see what worked and what didn't. For example, if mortality was high in week 1, you can improve brooding next time. If feed conversion was poor, you can check feed quality or health issues. (Source: Document 8 - Synthesis)"
+  }
+]
